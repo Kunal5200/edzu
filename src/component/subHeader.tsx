@@ -7,8 +7,8 @@ import React from "react";
 
 const SubHeader = () => {
   return (
-    <Box sx={{ backgroundColor: COLORS.BLACK, p: 1.5 }}>
-      <Container maxWidth={"lg"}>
+    <Box sx={{ backgroundColor: COLORS.PRIMARY, p: 1 }}>
+      <Container  >
         <Stack
           direction={"row"}
           alignItems={"center"}

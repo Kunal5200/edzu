@@ -9,7 +9,7 @@ import { HEADER_LINKS } from "@/utils/enum";
 const Header = () => {
   return (
     <Box sx={{ p: 1.5 }}>
-      <Container>
+      <Container >
         <Stack
           direction="row"
           alignItems={"center"}
