@@ -1,5 +1,14 @@
-import { HEADER_LINKS } from "@/utils/enum";
-import { Email, MoreVert, Phone, X } from "@mui/icons-material";
+import { COLORS, HEADER_LINKS } from "@/utils/enum";
+import {
+  AcUnit,
+  Computer,
+  DoneAll,
+  Email,
+  EmojiEvents,
+  MoreVert,
+  Phone,
+  X,
+} from "@mui/icons-material";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 
@@ -46,4 +55,36 @@ export const data = {
       url: "/contact-us",
     },
   ],
+  courseSection: [
+    {
+      icon: DoneAll,
+      heading: "Learn The Latest Skills",
+      description: "Like business analytics, graphic design, Python, and more.",
+      color: COLORS.GREY,
+      textColor: COLORS.BLACK,
+    },
+    {
+      icon: Computer,
+      heading: "100k Online Courses",
+      description: "In high-demand fields like IT, AI and cloud engineering.",
+      color: COLORS.PRIMARY,
+      textColor: COLORS.WHITE,
+    },
+    {
+      icon: AcUnit,
+      heading: "Earn a Certificate",
+      description:
+        "From a leading university in business, computer science, and more.",
+      color: COLORS.GREY,
+      textColor: COLORS.BLACK,
+    },
+    {
+      icon: EmojiEvents,
+      heading: "Up Your Skill",
+      description: "With on-demand training and development programs.",
+      color: COLORS.PRIMARY,
+      textColor: COLORS.WHITE,
+    },
+  ],
+
 };

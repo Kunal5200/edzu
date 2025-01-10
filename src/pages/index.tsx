@@ -1,4 +1,7 @@
+import AboutSection from "@/component/about";
 import Banner from "@/component/banner";
+import Courses from "@/component/courses";
+import CourseSection from "@/component/courseSection";
 import { Box } from "@mui/material";
 import Head from "next/head";
 
@@ -13,6 +16,13 @@ export default function Home() {
       </Head>
       <Box>
         <Banner />
+        <CourseSection />
+        <Box sx={{ pt: 8, pb: 8 }}>
+          <Courses />
+        </Box>
+        <Box sx={{ pt: 8, pb: 8 }}>
+          <AboutSection />
+        </Box>
       </Box>
     </>
   );

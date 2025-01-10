@@ -1,17 +1,25 @@
-import { Box, Button, Container, Grid2, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Button,
+  Container,
+  Grid2,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import bannerImage from "@/banner/web-banner.jpg";
 import { COLORS } from "@/utils/enum";
 import { kanit, roboto } from "@/utils/fonts";
 import Image from "next/image";
 import bannerside from "@/banner/banner.png";
+import { ArrowForward } from "@mui/icons-material";
 const Banner = () => {
   return (
     <div>
       <Box
         sx={{
           backgroundImage: `url(${bannerImage.src})`,
-          height: "90vh",
+          height: "100vh",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -21,7 +29,7 @@ const Banner = () => {
         }}
       >
         <Container>
-          <Grid2 container alignItems={"center"}>
+          <Grid2 container alignItems={"center"} spacing={10}>
             <Grid2 size={6}>
               <Typography
                 sx={{ fontSize: 60, fontWeight: 700, fontFamily: roboto.style }}
@@ -57,14 +65,42 @@ const Banner = () => {
                   fontSize: 14,
                   color: COLORS.WHITE,
                   backgroundColor: COLORS.PRIMARY,
-                  mt: 2,
+                  mt: 3,
+                  p: 1.5,
+                  ":hover": {
+                    backgroundColor: COLORS.SECONDARY,
+                    // svg: {
+                    //   transform: "translateX(5px)",
+                    // },
+                    ".avatar": {
+                      backgroundColor: COLORS.PRIMARY,
+                      transform: "translateX(10px)",
+                    },
+                  },
+                  svg: {
+                    transition: "0.5s ease all",
+                  },
+                  ".avatar": {
+                    transition: "0.5s ease all",
+                  },
+                  fontFamily: roboto.style,
+                  borderRadius: 8,
+                  width: 250,
                 }}
+                endIcon={
+                  <Avatar
+                    sx={{ backgroundColor: COLORS.SECONDARY }}
+                    className="avatar"
+                  >
+                    <ArrowForward />
+                  </Avatar>
+                }
               >
                 View All courses
               </Button>
             </Grid2>
             <Grid2 size={6}>
-              <Image src={bannerside} alt="" width={500} />
+              <Image src={bannerside} alt="" width={450} />
             </Grid2>
           </Grid2>
         </Container>

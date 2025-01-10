@@ -3,9 +3,11 @@ export enum COLORS {
   WHITE = "#FFFFFF",
   MINT_GREEN = "#9e2b25",
   BANNER_COLOR = "#EAF0F2",
-  PRIMARY = "#FF1949",
+  PRIMARY = "#2171B5",
   TEXT = "#727695",
-  SECONDARY = "#0EB582",
+  SECONDARY = "#6BAED6",
+  BLUE = "#0E2742",
+  GREY="#EFF3FF"
 }
 
 export enum HEADER_LINKS {
