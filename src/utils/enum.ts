@@ -10,6 +10,7 @@ export enum COLORS {
   GREY = "#EFF3FF",
   SECTIONBG = "#E7F0FD",
   FOOTERBG = "#12141B",
+  TRANSPARENT = "transparent",
 }
 
 export enum HEADER_LINKS {

@@ -1,7 +1,6 @@
 import { data } from "@/assest/data";
 import { COLORS } from "@/utils/enum";
 import { roboto } from "@/utils/fonts";
-import { Person2 } from "@mui/icons-material";
 import {
   Avatar,
   Box,
@@ -9,11 +8,12 @@ import {
   Grid2,
   Stack,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
-import React from "react";
 import CountUp from "react-countup";
 
 const Counter = () => {
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <div>
       <Box
@@ -28,22 +28,26 @@ const Counter = () => {
         <Container>
           <Grid2 container spacing={5}>
             {data.counterData.map((val, i) => (
-              <Grid2 size={3}>
-                <Stack direction={"row"} alignItems={"center"} spacing={1}>
+              <Grid2 size={{ lg: 3, xs: 6 }}>
+                <Stack
+                  direction={{ lg: "row", xs: "column" }}
+                  alignItems={"center"}
+                  spacing={1}
+                >
                   <Avatar
                     sx={{
                       backgroundColor: COLORS.PRIMARY,
-                      width: 60,
-                      height: 60,
+                      width: { lg: 60, xs: 40 },
+                      height: { lg: 60, xs: 40 },
                     }}
                   >
-                    <val.icon sx={{ fontSize: 30 }} />
+                    <val.icon sx={{ fontSize: { lg: 30, xs: 20 } }} />
                   </Avatar>
                   <Box>
                     <CountUp
                       end={val.count}
                       style={{
-                        fontSize: 40,
+                        fontSize: phone ? 25 : 40,
                         color: COLORS.WHITE,
                         textAlign: "center",
                         margin: "auto",
@@ -56,7 +60,7 @@ const Counter = () => {
                     />
                     <Typography
                       sx={{
-                        fontSize: 15,
+                        fontSize: { lg: 15, xs: 14 },
                         fontFamily: roboto.style,
                         color: COLORS.WHITE,
                         textAlign: "center",

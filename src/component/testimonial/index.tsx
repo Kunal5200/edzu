@@ -36,14 +36,28 @@ const Testimonial = () => {
           </Typography>
 
           <Swiper
-            slidesPerView={3}
-            spaceBetween={10}
+            // slidesPerView={3}
+            // spaceBetween={10}
             modules={[Autoplay]}
             autoplay={{
               delay: 2000,
             }}
             grabCursor
             loop
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
           >
             {TestimonialData.map((val, i) => (
               <SwiperSlide>

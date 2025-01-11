@@ -3,12 +3,15 @@ import React from "react";
 import SubHeader from "./subHeader";
 import Header from "./header";
 import Footer from "./footer";
+import { useMediaQuery } from "@mui/material";
+import MobileHeader from "./mobileHeader";
 
 const Layout = ({ children }: LayoutProps) => {
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <div>
       <SubHeader />
-      <Header />
+      {phone ? <MobileHeader /> : <Header />}
       {children}
       <Footer />
     </div>

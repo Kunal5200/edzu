@@ -5,6 +5,7 @@ import {
   Container,
   Grid2,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import React from "react";
 import bannerImage from "@/banner/web-banner.jpg";
@@ -14,6 +15,7 @@ import Image from "next/image";
 import bannerside from "@/banner/banner.png";
 import { ArrowForward } from "@mui/icons-material";
 const Banner = () => {
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <div>
       <Box
@@ -30,14 +32,18 @@ const Banner = () => {
       >
         <Container>
           <Grid2 container alignItems={"center"} spacing={10}>
-            <Grid2 size={6}>
+            <Grid2 size={{ lg: 6, xs: 12 }}>
               <Typography
-                sx={{ fontSize: 60, fontWeight: 700, fontFamily: roboto.style }}
+                sx={{
+                  fontSize: { lg: 60, xs: 20 },
+                  fontWeight: 700,
+                  fontFamily: roboto.style,
+                }}
               >
                 Check out our{" "}
                 <Typography
                   sx={{
-                    fontSize: 60,
+                    fontSize: { lg: 60, xs: 20 },
                     fontWeight: 700,
                     fontFamily: roboto.style,
                     color: COLORS.PRIMARY,
@@ -99,8 +105,8 @@ const Banner = () => {
                 View All courses
               </Button>
             </Grid2>
-            <Grid2 size={6}>
-              <Image src={bannerside} alt="" width={450} />
+            <Grid2 size={6} sx={{textAlign:"center"}}>
+              <Image src={bannerside} alt="" width={phone ? 400 : 450} />
             </Grid2>
           </Grid2>
         </Container>

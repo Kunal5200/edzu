@@ -25,7 +25,7 @@ const Footer = () => {
         sx={{
           backgroundColor: COLORS.FOOTERBG,
           p: 3,
-          height: "55vh",
+          height: { lg: "55vh", xs: "100%" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -33,7 +33,7 @@ const Footer = () => {
       >
         <Container>
           <Grid2 container spacing={5}>
-            <Grid2 size={3}>
+            <Grid2 size={{ lg: 3, xs: 12 }}>
               <Typography
                 sx={{
                   fontSize: 20,
@@ -96,7 +96,7 @@ const Footer = () => {
               </Stack>
             </Grid2>
             {data.footerLinks.map((val, i) => (
-              <Grid2 size={3}>
+              <Grid2 size={{ lg: 3, xs: 6 }}>
                 <Typography
                   sx={{
                     fontSize: 20,
@@ -118,7 +118,7 @@ const Footer = () => {
                 <List>
                   {val.list.map((item, index) => (
                     <ListItemButton key={i} sx={{ padding: 1 }}>
-                      <ListItemAvatar>
+                      <ListItemAvatar sx={{ minWidth: { lg: 0, xs: 20 } }}>
                         <Box
                           sx={{
                             width: 10,
@@ -131,7 +131,7 @@ const Footer = () => {
                         primary={
                           <Typography
                             sx={{
-                              fontSize: 14,
+                              fontSize: { lg: 14, xs: 12 },
                               fontFamily: roboto.style,
                               color: COLORS.WHITE,
                             }}
@@ -146,7 +146,7 @@ const Footer = () => {
               </Grid2>
             ))}
 
-            <Grid2 size={3}>
+            <Grid2 size={{ lg: 3, xs: 12 }}>
               <Typography
                 sx={{
                   fontSize: 20,

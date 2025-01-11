@@ -56,6 +56,7 @@ export const data = {
     {
       label: HEADER_LINKS.PROGRAMS,
       url: "/courses",
+      icon: true,
     },
     {
       label: HEADER_LINKS.CONTACT,

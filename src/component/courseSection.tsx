@@ -20,9 +20,14 @@ const CourseSection = () => {
         <Grid2 container>
           {data.courseSection.map((val, i) => (
             <Grid2
-              size={3}
+              size={{ lg: 3, xs: 6 }}
               key={i}
-              sx={{ backgroundColor: val.color, px: 4, pt: 4, pb: 4 }}
+              sx={{
+                backgroundColor: val.color,
+                px: { lg: 4, xs: 2 },
+                pt: { lg: 4, xs: 2 },
+                pb: { lg: 4, xs: 2 },
+              }}
             >
               {/* <Stack direction={"row"} spacing={2}>
                   <Avatar
@@ -75,7 +80,7 @@ const CourseSection = () => {
               <Typography
                 sx={{
                   color: val.textColor,
-                  fontSize: 20,
+                  fontSize: { lg: 20, xs: 18},
                   fontFamily: roboto.style,
                   fontWeight: 550,
                 }}
@@ -102,9 +107,8 @@ const CourseSection = () => {
                   textTransform: "initial",
                   color: val.textColor,
                   mt: 1,
-                  
                 }}
-                endIcon={<Add  />}
+                endIcon={<Add />}
               >
                 View Courses
               </Button>

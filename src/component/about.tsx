@@ -7,6 +7,7 @@ import {
   ListItemAvatar,
   ListItemText,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import React from "react";
 import aboutBanner from "@/banner/new-comer.png";
@@ -29,14 +30,16 @@ const AboutSection = () => {
       label: "10+ More Lessons",
     },
   ];
+
+  const phone=useMediaQuery("(max-width:600px)")
   return (
     <div>
       <Container>
         <Grid2 container>
-          <Grid2 size={6}>
-            <Image src={aboutBanner} alt="" width={500} />
+          <Grid2 size={{ lg: 6, xs: 12 }}>
+            <Image src={aboutBanner} alt="" width={phone ?  450 :500} />
           </Grid2>
-          <Grid2 size={6}>
+          <Grid2 size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{
                 fontSize: 14,
@@ -49,7 +52,7 @@ const AboutSection = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: 40,
+                fontSize: { lg: 40, xs: 30 },
                 fontFamily: roboto.style,
                 fontWeight: 600,
                 mt: 1,
@@ -72,9 +75,9 @@ const AboutSection = () => {
             </Typography>
             <Grid2 container mt={2}>
               {benefits.map((val, i) => (
-                <Grid2 size={6}>
+                <Grid2 size={{ lg: 6, xs: 12 }} key={i}>
                   <List>
-                    <ListItem disablePadding> 
+                    <ListItem disablePadding>
                       <ListItemAvatar
                         sx={{
                           backgroundColor: COLORS.PRIMARY,

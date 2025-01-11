@@ -35,7 +35,25 @@ const Courses = () => {
       </Typography>
       <Container sx={{ mt: 5 }}>
         <Box>
-          <Swiper slidesPerView={3} spaceBetween={40} grabCursor>
+          <Swiper
+            // slidesPerView={3}
+            // spaceBetween={40}
+            grabCursor
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
+          >
             {COURSESDATA.map((val, i) => (
               <SwiperSlide key={i}>
                 <CourseCard

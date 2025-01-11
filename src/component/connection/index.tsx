@@ -10,7 +10,7 @@ const Connection = () => {
     <div>
       <Container>
         <Grid2 container>
-          <Grid2 size={6}>
+          <Grid2 size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{
                 textTransform: "uppercase",
@@ -24,7 +24,7 @@ const Connection = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: 40,
+                fontSize: { lg: 40, xs: 30 },
                 fontFamily: roboto.style,
                 fontWeight: 700,
                 mt: 2,
@@ -33,7 +33,7 @@ const Connection = () => {
               What We Offer For Growth
             </Typography>
           </Grid2>
-          <Grid2 size={6}>
+          <Grid2 size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{
                 color: COLORS.TEXT,
@@ -64,7 +64,7 @@ const Connection = () => {
         </Grid2>
         <Grid2 container mt={5} spacing={5}>
           {data.connectionData.map((val, i) => (
-            <Grid2 size={4} key={i}>
+            <Grid2 size={{ lg: 4, xs: 12}} key={i}>
               <ConnectionCard
                 number={val.number}
                 heading={val.heading}

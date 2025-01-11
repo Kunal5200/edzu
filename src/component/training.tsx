@@ -1,18 +1,25 @@
-import { Button, Container, Grid2, Typography } from "@mui/material";
+import {
+  Button,
+  Container,
+  Grid2,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import React from "react";
 import subfooter from "@/banner/subFooter.png";
 import Image from "next/image";
 import { COLORS } from "@/utils/enum";
 import { roboto } from "@/utils/fonts";
 const Training = () => {
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <div>
       <Container>
         <Grid2 container>
-          <Grid2 size={6}>
-            <Image src={subfooter} alt="" width={500} />
+          <Grid2 size={{ lg: 6, xs: 12 }}>
+            <Image src={subfooter} alt="" width={phone ? 400 : 500} />
           </Grid2>
-          <Grid2 size={6}>
+          <Grid2 size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{
                 fontSize: 14,
@@ -26,7 +33,7 @@ const Training = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: 40,
+                fontSize: {lg:40,xs:30},
                 fontFamily: roboto.style,
                 fontWeight: 550,
                 mt: 1,

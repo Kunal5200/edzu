@@ -10,7 +10,7 @@ const SubHeader = () => {
     <Box sx={{ backgroundColor: COLORS.PRIMARY, p: 1 }}>
       <Container  >
         <Stack
-          direction={"row"}
+          direction={{lg:"row",xs:"column"}}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
