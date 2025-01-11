@@ -15,3 +15,16 @@ export interface COURSE_PROPS {
   time: string;
   lessons: string;
 }
+
+export interface TESTIMONIAL_DATA {
+  img: StaticImageData | string;
+  name: string;
+  content: string;
+  designation: string;
+}
+
+export interface CONNECTION_PROPS {
+  number: string;
+  heading: string;
+  content: string;
+}

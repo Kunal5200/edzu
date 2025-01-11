@@ -7,7 +7,9 @@ export enum COLORS {
   TEXT = "#727695",
   SECONDARY = "#6BAED6",
   BLUE = "#0E2742",
-  GREY="#EFF3FF"
+  GREY = "#EFF3FF",
+  SECTIONBG = "#E7F0FD",
+  FOOTERBG = "#12141B",
 }
 
 export enum HEADER_LINKS {

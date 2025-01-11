@@ -1,7 +1,11 @@
 import AboutSection from "@/component/about";
 import Banner from "@/component/banner";
+import Connection from "@/component/connection";
+import Counter from "@/component/counter";
 import Courses from "@/component/courses";
 import CourseSection from "@/component/courseSection";
+import Testimonial from "@/component/testimonial";
+import Training from "@/component/training";
 import { Box } from "@mui/material";
 import Head from "next/head";
 
@@ -22,6 +26,18 @@ export default function Home() {
         </Box>
         <Box sx={{ pt: 8, pb: 8 }}>
           <AboutSection />
+        </Box>
+        <Box sx={{ pt: 8, pb: 8 }}>
+          <Counter />
+        </Box>
+        <Box sx={{ pt: 8, pb: 8 }}>
+          <Testimonial />
+        </Box>
+        <Box sx={{ pt: 8, pb: 8 }}>
+          <Connection />
+        </Box>
+        <Box sx={{ pt: 8, pb: 8 }}>
+          <Training />
         </Box>
       </Box>
     </>

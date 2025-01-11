@@ -4,9 +4,16 @@ import {
   Computer,
   DoneAll,
   Email,
+  EmailOutlined,
   EmojiEvents,
+  EmojiObjects,
+  LibraryBooksOutlined,
+  LocationOn,
+  Mood,
   MoreVert,
+  Person2,
   Phone,
+  PhoneAndroid,
   X,
 } from "@mui/icons-material";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
@@ -86,5 +93,100 @@ export const data = {
       textColor: COLORS.WHITE,
     },
   ],
+  counterData: [
+    {
+      icon: Person2,
+      count: 50,
+      label: "Expert Instructors",
+    },
+    {
+      icon: LibraryBooksOutlined,
+      count: 1150,
+      label: "Total Courses",
+    },
+    {
+      icon: Mood,
+      count: 8190,
+      label: "Happy Students",
+    },
+    {
+      icon: EmojiObjects,
+      count: 654,
+      label: "Creative Events",
+    },
+  ],
 
+  connectionData: [
+    {
+      number: "01",
+      heading: "Exclusive Advisor",
+      content:
+        "Nulla quis lorem ut libero malesuada feugiat pellentesque in ipsum id orci porta dapibus donec sollicitudin molestie malesuada quisque velit nisi pretium ut lacinia.",
+    },
+    {
+      number: "02",
+      heading: "Reached Your Goals",
+      content:
+        "Nulla quis lorem ut libero malesuada feugiat pellentesque in ipsum id orci porta dapibus donec sollicitudin molestie malesuada quisque velit nisi pretium ut lacinia.",
+    },
+    {
+      number: "03",
+      heading: "Digital Laboratory",
+      content:
+        "Nulla quis lorem ut libero malesuada feugiat pellentesque in ipsum id orci porta dapibus donec sollicitudin molestie malesuada quisque velit nisi pretium ut lacinia.",
+    },
+  ],
+  footerContact: [
+    {
+      icon: LocationOn,
+      label: "Delhi-Meerut road, Ghaziabad,UP India",
+    },
+    {
+      icon: PhoneAndroid,
+      label: "+91 9354678205",
+    },
+    {
+      icon: EmailOutlined,
+      label: "kunalsharma5868@gmail.com",
+    },
+  ],
+  footerLinks: [
+    {
+      heading: "Support",
+      list: [
+        {
+          label: "Home",
+        },
+        {
+          label: "About Us",
+        },
+        {
+          label: "Contact",
+        },
+        {
+          label: "Privacy Policy",
+        },
+        {
+          label: "Terms & Conditions",
+        },
+      ],
+    },
+    {
+      heading: "UseFul Links",
+      list: [
+        {
+          label: "Graphic Design",
+        },
+        {
+          label: "Photography",
+        },
+        {
+          label: "Web Design",
+        },
+        {
+          label: "Web Development",
+        },
+      ],
+    },
+  ],
 };
