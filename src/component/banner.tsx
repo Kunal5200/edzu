@@ -1,3 +1,9 @@
+import bannerside from "@/banner/banner.png";
+import bannerImage from "@/banner/web-banner.jpg";
+import { COLORS } from "@/utils/enum";
+import { roboto } from "@/utils/fonts";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { ArrowForward } from "@mui/icons-material";
 import {
   Avatar,
   Box,
@@ -7,52 +13,49 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import React from "react";
-import bannerImage from "@/banner/web-banner.jpg";
-import { COLORS } from "@/utils/enum";
-import { kanit, roboto } from "@/utils/fonts";
 import Image from "next/image";
-import bannerside from "@/banner/banner.png";
-import { ArrowForward } from "@mui/icons-material";
+
 const Banner = () => {
   const phone = useMediaQuery("(max-width:600px)");
+
   return (
     <div>
       <Box
         sx={{
-          backgroundImage: `url(${bannerImage.src})`,
-          height: "100vh",
+          // backgroundImage: `url(${bannerImage.src})`,
+          height: {lg:"100vh",xs:"80vh"},
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          backgroundColor: "#BDD7E7",
         }}
       >
         <Container>
-          <Grid2 container alignItems={"center"} spacing={10}>
+          <Grid2 container alignItems={"center"} spacing={{ lg: 10, xs: 4 }}>
             <Grid2 size={{ lg: 6, xs: 12 }}>
               <Typography
                 sx={{
-                  fontSize: { lg: 60, xs: 25 },
+                  fontSize: { lg: 40, xs: 25 },
                   fontWeight: 700,
                   fontFamily: roboto.style,
                 }}
               >
-                Check out our{" "}
+                Transform Your{" "}
                 <Typography
                   sx={{
-                    fontSize: { lg: 60, xs: 25 },
+                    fontSize: { lg: 40, xs: 25 },
                     fontWeight: 700,
                     fontFamily: roboto.style,
                     color: COLORS.PRIMARY,
                   }}
                   component={"span"}
                 >
-                  LMS courses
+                  Future with Industry
                 </Typography>{" "}
-                for employee training
+                Leading Programs
               </Typography>
               <Typography
                 sx={{
@@ -62,9 +65,8 @@ const Banner = () => {
                   fontFamily: roboto.style,
                 }}
               >
-                Curabitur arcu erat accumsan id imperdiet et porttitor at sem
-                vivamus magna justo lacinia eget consectetur sed convallis at
-                tellus pellentesque in ipsum id orci porta dapibus.
+                From classroom to career readiness, we’ve got you covered with
+                expert-led training
               </Typography>
               <Button
                 sx={{
@@ -75,9 +77,7 @@ const Banner = () => {
                   p: 1.5,
                   ":hover": {
                     backgroundColor: COLORS.SECONDARY,
-                    // svg: {
-                    //   transform: "translateX(5px)",
-                    // },
+
                     ".avatar": {
                       backgroundColor: COLORS.PRIMARY,
                       transform: "translateX(10px)",
@@ -102,13 +102,29 @@ const Banner = () => {
                   </Avatar>
                 }
               >
-                View All courses
+                Explore Programs
               </Button>
             </Grid2>
             <Grid2 size={6} sx={{ textAlign: "center" }}>
-              <Box sx={{width:{lg:400,xs:350}}}>
-                <Image src={bannerside} alt="" className="img-fluid" />
-              </Box>
+              {/* <Box sx={{ width: { lg: 400, xs: 350 } }}> */}
+              {/* <Image src={"https://lottie.host/73e75ca1-0ab5-42bd-95d5-26f55b746e24/sI2fOdsWW7.lottie"} alt="" className="img-fluid" width={400} height={350} /> */}
+              <iframe
+                src="https://lottie.host/embed/73e75ca1-0ab5-42bd-95d5-26f55b746e24/sI2fOdsWW7.lottie"
+                style={{
+                  border: "none",
+                  width: phone ? 400 : 550,
+                  height: 350,
+                }}
+              ></iframe>
+              {/* <DotLottieReact
+                src={
+                  "https://lottie.host/73e75ca1-0ab5-42bd-95d5-26f55b746e24/sI2fOdsWW7.lottie"
+                }
+                loop
+                autoplay
+                // width={500}
+              /> */}
+              {/* </Box> */}
             </Grid2>
           </Grid2>
         </Container>

@@ -1,4 +1,4 @@
-import { COLORS, HEADER_LINKS } from "@/utils/enum";
+import { COLORS, COURSE_TYPE, HEADER_LINKS } from "@/utils/enum";
 import {
   AcUnit,
   Computer,
@@ -59,6 +59,10 @@ export const data = {
       icon: true,
     },
     {
+      label: HEADER_LINKS.COMBOPACKS,
+      url: "combo-packs",
+    },
+    {
       label: HEADER_LINKS.CONTACT,
       url: "/contact",
     },
@@ -66,30 +70,29 @@ export const data = {
   courseSection: [
     {
       icon: DoneAll,
-      heading: "Learn The Latest Skills",
-      description: "Like business analytics, graphic design, Python, and more.",
+      heading: "Google Rating",
+      description: "4.3",
       color: COLORS.GREY,
       textColor: COLORS.BLACK,
     },
     {
       icon: Computer,
-      heading: "100k Online Courses",
-      description: "In high-demand fields like IT, AI and cloud engineering.",
+      heading: "Courses",
+      description: "9+ courses",
       color: COLORS.PRIMARY,
       textColor: COLORS.WHITE,
     },
     {
       icon: AcUnit,
-      heading: "Earn a Certificate",
-      description:
-        "From a leading university in business, computer science, and more.",
+      heading: "Mentees",
+      description: "7k+ Mentees enrolled ",
       color: COLORS.GREY,
       textColor: COLORS.BLACK,
     },
     {
       icon: EmojiEvents,
-      heading: "Up Your Skill",
-      description: "With on-demand training and development programs.",
+      heading: "Certificate",
+      description: "Govt. Certified Certificate",
       color: COLORS.PRIMARY,
       textColor: COLORS.WHITE,
     },
@@ -292,6 +295,14 @@ export const data = {
       heading: "Academic Excellence and Cultural Diversity",
       description:
         "We created the Website.com Site Builder with the user’s perspective in mind. We wanted to offer a platform that would require no coding skills or design experience. We keep it simple, so users can focus on creating an amazing website that reflects their brand. Best of all – it’s free. You can get online, showcase your brand, or start selling products right away.",
+    },
+  ],
+  courseTypeProduct: [
+    {
+      label: COURSE_TYPE.TECH,
+    },
+    {
+      label: COURSE_TYPE.BUSINESS,
     },
   ],
 };

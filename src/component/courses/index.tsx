@@ -1,12 +1,19 @@
 import { COLORS } from "@/utils/enum";
 import { roboto } from "@/utils/fonts";
-import { Box, Container, Typography } from "@mui/material";
-import React from "react";
+import { Box, Container, Grid2, Tab, Tabs, Typography } from "@mui/material";
+import React, { SyntheticEvent, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CourseCard from "./courseCard";
 import { COURSESDATA } from "@/assest/coursesData";
+import { data } from "@/assest/data";
+import TabPanel from "../tabpanel";
 
 const Courses = () => {
+  const [value, setValue] = useState(0);
+
+  const tabChangeHandler = (e: SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
   return (
     <div>
       <Typography
@@ -34,10 +41,41 @@ const Courses = () => {
         Our Popular Online Courses
       </Typography>
       <Container sx={{ mt: 5 }}>
-        <Box>
+        <Tabs onChange={tabChangeHandler} value={value}>
+          {data.courseTypeProduct.map((val, i) => (
+            <Tab
+              label={
+                <Typography sx={{ fontSize: 14, fontFamily: roboto.style }}>
+                  {val.label}
+                </Typography>
+              }
+              key={i}
+            />
+          ))}
+        </Tabs>
+        {data.courseTypeProduct.map((_, i) => (
+          <TabPanel value={value} index={i}>
+            <Grid2 container sx={{ mt: 3 }} spacing={4}>
+              {COURSESDATA.map((val, index) => (
+                <Grid2 size={{ lg: 4, xs: 12 }}>
+                  <CourseCard
+                    img={val.img}
+                    title={val.title}
+                    tutorName={val.tutorName}
+                    price={val.price}
+                    rating={val.rating}
+                    category={val.category}
+                    lessons={val.lessons}
+                    time={val.time}
+                  />
+                </Grid2>
+              ))}
+            </Grid2>
+          </TabPanel>
+        ))}
+
+        {/* <Box>
           <Swiper
-            // slidesPerView={3}
-            // spaceBetween={40}
             grabCursor
             breakpoints={{
               640: {
@@ -69,7 +107,7 @@ const Courses = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </Box>
+        </Box> */}
       </Container>
     </div>
   );

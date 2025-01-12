@@ -29,58 +29,10 @@ const CourseSection = () => {
                 pb: { lg: 4, xs: 2 },
               }}
             >
-              {/* <Stack direction={"row"} spacing={2}>
-                  <Avatar
-                    sx={{
-                      backgroundColor: COLORS.PRIMARY,
-                      width: 60,
-                      height: 60,
-                    }}
-                  >
-                    <val.icon />
-                  </Avatar>
-                  <Box>
-                    <Typography
-                      sx={{
-                        fontSize: 20,
-                        fontFamily: roboto.style,
-                        color: COLORS.WHITE,
-                        textTransform: "capitalize",
-                      }}
-                    >
-                      {val.heading}
-                    </Typography>
-                    <Typography
-                      sx={{
-                        fontSize: 14,
-                        fontFamily: roboto.style,
-                        color: COLORS.WHITE,
-                        textTransform: "capitalize",
-                        mt: 1,
-                      }}
-                    >
-                      {val.description}
-                    </Typography>
-                    <Button
-                      sx={{
-                        fontSize: 12,
-                        fontFamily: roboto.style,
-                        fontWeight: 500,
-                        p: 0.8,
-                        textTransform: "initial",
-                        color: COLORS.WHITE,
-                        mt: 1,
-                      }}
-                      endIcon={<Add />}
-                    >
-                      View Courses
-                    </Button>
-                  </Box>
-                </Stack> */}
               <Typography
                 sx={{
                   color: val.textColor,
-                  fontSize: { lg: 20, xs: 18},
+                  fontSize: { lg: 20, xs: 18 },
                   fontFamily: roboto.style,
                   fontWeight: 550,
                 }}
@@ -90,7 +42,7 @@ const CourseSection = () => {
               <Typography
                 sx={{
                   color: val.textColor,
-                  fontSize: 15,
+                  fontSize: 20,
                   fontFamily: roboto.style,
                   fontWeight: 400,
                   mt: 2,

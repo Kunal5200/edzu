@@ -18,4 +18,10 @@ export enum HEADER_LINKS {
   ABOUT = "About",
   PROGRAMS = "Programs",
   CONTACT = "Contact",
+  COMBOPACKS = "Combo Packs",
+}
+
+export enum COURSE_TYPE {
+  TECH = "TECH & Data",
+  BUSINESS = "BUSINESS",
 }

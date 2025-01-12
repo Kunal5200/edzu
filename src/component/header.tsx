@@ -12,6 +12,7 @@ import {
 import { data } from "@/assest/data";
 import { COLORS, HEADER_LINKS } from "@/utils/enum";
 import { useRouter } from "next/router";
+import Link from "next/link";
 const Header = () => {
   const router = useRouter();
   const [isScrolling, setIsScrolling] = useState(false);
@@ -51,13 +52,15 @@ const Header = () => {
           alignItems={"center"}
           justifyContent={"space-between"}
         >
-          <Image src={logo} alt="" width={90} />
+          <Link href="/">
+            <Image src={logo} alt="" width={90} />
+          </Link>
           <Stack direction={"row"} alignItems={"center"} spacing={4}>
             {data.headerLinks.map((val, i) =>
               val.icon ? (
                 <Typography
                   sx={{
-                    fontSize: 18,
+                    fontSize: 16,
                     fontFamily: roboto.style,
                     fontWeight: 400,
                     display: "flex",
@@ -72,7 +75,7 @@ const Header = () => {
               ) : (
                 <Typography
                   sx={{
-                    fontSize: 18,
+                    fontSize: 16,
                     fontFamily: roboto.style,
                     fontWeight: 400,
                     position: "relative",

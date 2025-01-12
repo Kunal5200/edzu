@@ -65,7 +65,9 @@ const CourseCard = ({
             transition: "0.5s ease all",
           },
           height: 520,
+          boxShadow: "0px 0px 4px 4px rgb(0,0,0,0.10)",
         }}
+        data-aos="fade-up"
       >
         <Box
           sx={{
