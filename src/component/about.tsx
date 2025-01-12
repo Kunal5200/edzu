@@ -37,7 +37,7 @@ const AboutSection = () => {
       <Container>
         <Grid2 container>
           <Grid2 size={{ lg: 6, xs: 12 }}>
-            <Image src={aboutBanner} alt="" width={phone ?  450 :500} />
+            <Image src={aboutBanner} alt="" width={phone ?  400 :500} />
           </Grid2>
           <Grid2 size={{ lg: 6, xs: 12 }}>
             <Typography

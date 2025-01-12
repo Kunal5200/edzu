@@ -8,7 +8,7 @@ const Mission = () => {
       <Box
         sx={{
           backgroundImage: `url(${banner.src})`,
-          height: "100vh",
+          height: {lg:"100vh",xs:"100vh"},
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
@@ -19,7 +19,7 @@ const Mission = () => {
       >
         <Container>
           <Grid2 container>
-            <Grid2 size={5}>
+            <Grid2 size={{ lg: 6, xs: 12 }}>
               <MissionCard />
             </Grid2>
           </Grid2>

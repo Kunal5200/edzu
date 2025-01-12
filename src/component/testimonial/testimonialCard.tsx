@@ -40,7 +40,7 @@ const TestimonialCard = ({
             </Typography>
           </Box>
         </Stack>
-        <Typography sx={{ fontSize: 15, fontFamily: roboto.style, mt: 2 }}>
+        <Typography sx={{ fontSize: 15, fontFamily: roboto.style, mt: 2,color:COLORS.TEXT }}>
           {content}
         </Typography>
       </Card>

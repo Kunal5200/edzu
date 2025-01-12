@@ -31,7 +31,7 @@ const AboutCard = ({ heading, content, list }: ABOUTPROPS) => {
           fontSize: 15,
           fontFamily: roboto.style,
           color: COLORS.TEXT,
-          fontWeight: 400,
+          fontWeight: 300,
           mt: 2,
         }}
       >

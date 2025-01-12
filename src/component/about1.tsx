@@ -6,6 +6,7 @@ import {
   Grid2,
   Stack,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
@@ -17,26 +18,27 @@ import { Language } from "@mui/icons-material";
 import AboutCard from "./aboutCard";
 import { data } from "@/assest/data";
 const AboutPage = () => {
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <div>
       <Container>
         <Grid2 container spacing={7}>
-          <Grid2 size={6}>
+          <Grid2 size={{ lg: 6, xs: 12 }}>
             <Box sx={{ position: "relative" }}>
-              <Image src={image1} alt="" width={450} />
+              <Image src={image1} alt="" width={phone ? 380 : 450} />
               <Box
                 sx={{
-                  position: "absolute",
+                  position: { lg: "absolute", xs: "initial" },
                   bottom: -50,
                   right: 0,
                   border: "10px solid #ffffff",
                 }}
               >
-                <Image src={image2} alt="" />
+                <Image src={image2} alt="" className="img-fluid" />
               </Box>
             </Box>
           </Grid2>
-          <Grid2 size={6}>
+          <Grid2 size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{
                 textTransform: "uppercase",
@@ -52,7 +54,7 @@ const AboutPage = () => {
             <Typography
               sx={{
                 color: COLORS.BLACK,
-                fontSize: 45,
+                fontSize: { lg: 45, xs: 30 },
                 fontFamily: roboto.style,
                 fontWeight: 700,
               }}
@@ -64,7 +66,7 @@ const AboutPage = () => {
                 color: COLORS.TEXT,
                 fontSize: 15,
                 fontFamily: roboto.style,
-                fontWeight: 400,
+                fontWeight: 300,
                 mt: 2,
               }}
             >
@@ -87,7 +89,7 @@ const AboutPage = () => {
                 color: COLORS.TEXT,
                 fontSize: 15,
                 fontFamily: roboto.style,
-                fontWeight: 400,
+                fontWeight: 300,
                 mt: 2,
               }}
             >
@@ -112,7 +114,7 @@ const AboutPage = () => {
         </Grid2>
         <Grid2 container sx={{ mt: 20 }} spacing={5}>
           {data.aboutData.map((val, i) => (
-            <Grid2 size={4} key={i}>
+            <Grid2 size={{ lg: 4, xs: 12 }} key={i}>
               <AboutCard
                 heading={val.heading}
                 content={val.content}

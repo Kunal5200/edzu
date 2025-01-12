@@ -39,3 +39,12 @@ export interface ABOUTPROPS {
   content: string;
   list: LIST[];
 }
+
+export interface ABOUTDATAPROPS {
+  heading: string;
+  description: string;
+}
+export interface ABOUTSERVICEPROPS {
+  img: StaticImageData;
+  data: ABOUTDATAPROPS[];
+}

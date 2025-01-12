@@ -249,4 +249,49 @@ export const data = {
       ],
     },
   ],
+  missionData: [
+    {
+      heading: "A Place where you can Achieve",
+      content1:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      content2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      heading: "Quality can be better than Quantity in this Platform",
+      content1:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      content2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    },
+  ],
+  aboutServices: [
+    {
+      heading: "A Better Future Starts Here",
+      description:
+        "Website.com began in 2005. After years in the web hosting industry, we realized that it was near impossible for the average Jane or Joe to create their own website. Traditional web hosting services were simply too complicated, time consuming, and expensive to manage.",
+    },
+    {
+      heading: "A Classical Education for the Future",
+      description:
+        "We created the Website.com Site Builder with the user’s perspective in mind. We wanted to offer a platform that would require no coding skills or design experience. We keep it simple, so users can focus on creating an amazing website that reflects their brand. Best of all – it’s free. You can get online, showcase your brand, or start selling products right away.",
+    },
+    {
+      heading: "A Journey to Excellence",
+      description:
+        "After seeing an increased need for eCommerce solutions, we developed one of the only fully-featured, free and commission-free online store builders, allowing business owners to launch their online business.",
+    },
+  ],
+  aboutSuccess: [
+    {
+      heading: "A Success Oriented Learning Environment",
+      description:
+        "Website.com began in 2005. After years in the web hosting industry, we realized that it was near impossible for the average Jane or Joe to create their own website. Traditional web hosting services were simply too complicated, time consuming, and expensive to manage.",
+    },
+    {
+      heading: "Academic Excellence and Cultural Diversity",
+      description:
+        "We created the Website.com Site Builder with the user’s perspective in mind. We wanted to offer a platform that would require no coding skills or design experience. We keep it simple, so users can focus on creating an amazing website that reflects their brand. Best of all – it’s free. You can get online, showcase your brand, or start selling products right away.",
+    },
+  ],
 };

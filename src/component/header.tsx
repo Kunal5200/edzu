@@ -40,7 +40,7 @@ const Header = () => {
         top: 0,
         backgroundColor: isScrolling ? "#ffffff50" : "#ffffff",
         backdropFilter: "blur(5px)",
-        zIndex: 999,
+        zIndex: 9999,
         boxShadow: isScrolling ? "0px 0px 8px 8px rgb(0,0,0,0.20)" : "none",
         transition: "all 0.5s ease",
       }}

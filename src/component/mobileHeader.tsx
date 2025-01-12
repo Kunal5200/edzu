@@ -16,8 +16,14 @@ import logo from "@/logo/logo.png";
 import Image from "next/image";
 import { Close, ExpandMore, Menu } from "@mui/icons-material";
 import { data } from "@/assest/data";
+import { useRouter } from "next/router";
 const MobileHeader = () => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+  const changePath = (path: string) => {
+    router.push(path);
+    setOpen(false);
+  };
   return (
     <div>
       <Stack
@@ -72,7 +78,7 @@ const MobileHeader = () => {
               </Accordion>
             ) : (
               <>
-                <ListItemButton key={i}>
+                <ListItemButton key={i} onClick={() => changePath(val.url)}>
                   <ListItemText
                     primary={
                       <Typography

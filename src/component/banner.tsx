@@ -35,7 +35,7 @@ const Banner = () => {
             <Grid2 size={{ lg: 6, xs: 12 }}>
               <Typography
                 sx={{
-                  fontSize: { lg: 60, xs: 20 },
+                  fontSize: { lg: 60, xs: 25 },
                   fontWeight: 700,
                   fontFamily: roboto.style,
                 }}
@@ -43,7 +43,7 @@ const Banner = () => {
                 Check out our{" "}
                 <Typography
                   sx={{
-                    fontSize: { lg: 60, xs: 20 },
+                    fontSize: { lg: 60, xs: 25 },
                     fontWeight: 700,
                     fontFamily: roboto.style,
                     color: COLORS.PRIMARY,
@@ -105,8 +105,10 @@ const Banner = () => {
                 View All courses
               </Button>
             </Grid2>
-            <Grid2 size={6} sx={{textAlign:"center"}}>
-              <Image src={bannerside} alt="" width={phone ? 400 : 450} />
+            <Grid2 size={6} sx={{ textAlign: "center" }}>
+              <Box sx={{width:{lg:400,xs:350}}}>
+                <Image src={bannerside} alt="" className="img-fluid" />
+              </Box>
             </Grid2>
           </Grid2>
         </Container>
