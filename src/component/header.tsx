@@ -1,6 +1,6 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "@/logo/logo.png";
 import { kanit, roboto } from "@/utils/fonts";
 import {
@@ -14,12 +14,37 @@ import { COLORS, HEADER_LINKS } from "@/utils/enum";
 import { useRouter } from "next/router";
 const Header = () => {
   const router = useRouter();
-
+  const [isScrolling, setIsScrolling] = useState(false);
   const changePath = (path: string) => {
     router.push(path);
   };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        const currentScroll = window.pageYOffset;
+        // setScrollPosition(currentScroll);
+        setIsScrolling(currentScroll > 0);
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
   return (
-    <Box sx={{ p: 1.5 }}>
+    <Box
+      sx={{
+        p: 1,
+        position: isScrolling ? "fixed" : "relative",
+        width: "100%",
+        top: 0,
+        backgroundColor: isScrolling ? "#ffffff50" : "#ffffff",
+        backdropFilter: "blur(5px)",
+        zIndex: 999,
+        boxShadow: isScrolling ? "0px 0px 8px 8px rgb(0,0,0,0.20)" : "none",
+        transition: "all 0.5s ease",
+      }}
+    >
       <Container>
         <Stack
           direction="row"

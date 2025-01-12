@@ -118,7 +118,7 @@ const AboutSection = () => {
                 backgroundColor: COLORS.PRIMARY,
                 color: COLORS.WHITE,
                 width: 180,
-                borderRadius: 8,
+                borderRadius: 0,
                 p: 1,
               }}
             >

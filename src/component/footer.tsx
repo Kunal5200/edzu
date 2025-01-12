@@ -58,7 +58,7 @@ const Footer = () => {
                       primary={
                         <Typography
                           sx={{
-                            fontSize: 14,
+                            fontSize: 13,
                             fontFamily: roboto.style,
                             color: COLORS.WHITE,
                           }}
@@ -118,7 +118,7 @@ const Footer = () => {
                 <List>
                   {val.list.map((item, index) => (
                     <ListItemButton key={i} sx={{ padding: 1 }}>
-                      <ListItemAvatar sx={{ minWidth: { lg: 0, xs: 20 } }}>
+                      <ListItemAvatar sx={{ minWidth: { lg: 20, xs: 20 } }}>
                         <Box
                           sx={{
                             width: 10,

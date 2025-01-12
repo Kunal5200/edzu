@@ -162,8 +162,9 @@ const CourseCard = ({
                   textTransform: "initial",
                   backgroundColor: COLORS.PRIMARY,
                   mt: 1,
-                  color:COLORS.WHITE,
-                  fontFamily:roboto.style
+                  color: COLORS.WHITE,
+                  fontFamily: roboto.style,
+                  borderRadius: 0,
                 }}
               >
                 Enroll Now

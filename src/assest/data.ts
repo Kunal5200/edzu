@@ -51,7 +51,7 @@ export const data = {
     },
     {
       label: HEADER_LINKS.ABOUT,
-      url: "/about-us",
+      url: "/about",
     },
     {
       label: HEADER_LINKS.PROGRAMS,
@@ -60,7 +60,7 @@ export const data = {
     },
     {
       label: HEADER_LINKS.CONTACT,
-      url: "/contact-us",
+      url: "/contact",
     },
   ],
   courseSection: [
@@ -186,6 +186,65 @@ export const data = {
         },
         {
           label: "Web Development",
+        },
+      ],
+    },
+  ],
+  aboutData: [
+    {
+      heading: "100,000 online courses",
+      content:
+        "Real innovations and a positive customer experience are the heart of successful communication.",
+      list: [
+        {
+          label: "Activate listening",
+        },
+        {
+          label: "Brilliant minds",
+        },
+        {
+          label: "Better best wow!",
+        },
+        {
+          label: "Branding it better!",
+        },
+      ],
+    },
+    {
+      heading: "Expert instruction",
+      content:
+        "Real innovations and a positive customer experience are the heart of successful communication.",
+      list: [
+        {
+          label: "Creating results.",
+        },
+        {
+          label: "Expect more",
+        },
+        {
+          label: "Good thinking",
+        },
+        {
+          label: "In real we trust",
+        },
+      ],
+    },
+    {
+      heading: "Lifetime access",
+      content:
+        "Real innovations and a positive customer experience are the heart of successful communication.",
+      list: [
+        {
+          label: "Stay real always.",
+        },
+        {
+          label: "We have you covered",
+        },
+        {
+          label: "We turn heads",
+        },
+        {
+          label: "Your brand promoted",
         },
       ],
     },

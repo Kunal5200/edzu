@@ -62,7 +62,7 @@ const Training = () => {
                 fontFamily: roboto.style,
                 color: COLORS.WHITE,
                 backgroundColor: COLORS.PRIMARY,
-                borderRadius: 20,
+                borderRadius:0,
                 p: 1,
                 width: 150,
                 mt: 2,

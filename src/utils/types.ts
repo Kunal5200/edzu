@@ -5,6 +5,11 @@ export interface LayoutProps {
   children: ReactNode;
 }
 
+export interface LIST {
+  label?: string;
+  value?: string;
+}
+
 export interface COURSE_PROPS {
   img: StaticImageData | string;
   title: string;
@@ -27,4 +32,10 @@ export interface CONNECTION_PROPS {
   number: string;
   heading: string;
   content: string;
+}
+
+export interface ABOUTPROPS {
+  heading: string;
+  content: string;
+  list: LIST[];
 }
