@@ -48,3 +48,15 @@ export interface ABOUTSERVICEPROPS {
   img: StaticImageData;
   data: ABOUTDATAPROPS[];
 }
+
+export interface TECHDATAPROPS {
+  img: StaticImageData;
+  title: string;
+  course: string;
+}
+
+export interface CONTACTCARDPROPS {
+  icon: ReactNode;
+  heading: string;
+  value: string;
+}

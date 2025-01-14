@@ -22,6 +22,6 @@ export enum HEADER_LINKS {
 }
 
 export enum COURSE_TYPE {
-  TECH = "TECH & Data",
+  TECH = "TECH & DATA",
   BUSINESS = "BUSINESS",
 }

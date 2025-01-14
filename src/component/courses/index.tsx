@@ -1,28 +1,37 @@
-import { COLORS } from "@/utils/enum";
+import { data } from "@/assest/data";
+import { TECHDATA } from "@/assest/techData";
+import { COLORS, COURSE_TYPE } from "@/utils/enum";
 import { roboto } from "@/utils/fonts";
 import { Box, Container, Grid2, Tab, Tabs, Typography } from "@mui/material";
-import React, { SyntheticEvent, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import CourseCard from "./courseCard";
-import { COURSESDATA } from "@/assest/coursesData";
-import { data } from "@/assest/data";
+import { SyntheticEvent, useState } from "react";
 import TabPanel from "../tabpanel";
+import TechCard from "./techCard";
+import { BUSINESS } from "@/assest/business";
 
 const Courses = () => {
   const [value, setValue] = useState(0);
-
+  const [courseData, setCourseData] = useState(TECHDATA);
   const tabChangeHandler = (e: SyntheticEvent, newValue: number) => {
+    const target = e.target as HTMLElement;
+    const text = target.innerText || "";
+    // console.log("test",text)
+    if (text === COURSE_TYPE.BUSINESS) {
+      setCourseData(BUSINESS);
+    }
+    if (text === COURSE_TYPE.TECH) {
+      setCourseData(TECHDATA);
+    }
     setValue(newValue);
   };
   return (
-    <div>
+    <Box sx={{ backgroundColor: COLORS.SECONDARY, pt: 5, pb: 5,height:{lg:"70vh",xs:"100%"} }}>
       <Typography
         sx={{
           fontSize: 14,
           fontFamily: roboto.style,
           textTransform: "uppercase",
           textAlign: "center",
-          color: COLORS.PRIMARY,
+          color: COLORS.BLUE,
           letterSpacing: 3,
         }}
       >
@@ -33,19 +42,30 @@ const Courses = () => {
           fontSize: 30,
           fontFamily: roboto.style,
           textAlign: "center",
-          color: COLORS.BLACK,
+          color: COLORS.BLUE,
           fontWeight: 600,
           mt: 2,
         }}
       >
         Our Popular Online Courses
       </Typography>
-      <Container sx={{ mt: 5 }}>
-        <Tabs onChange={tabChangeHandler} value={value}>
+      <Container sx={{ mt: 3 }}>
+        <Tabs
+          onChange={tabChangeHandler}
+          value={value}
+          sx={{
+            "& .Mui-selected": {
+              color: `${COLORS.BLUE} !important`,
+            },
+            "& .MuiTabs-indicator": {
+              backgroundColor: COLORS.BLUE,
+            },
+          }}
+        >
           {data.courseTypeProduct.map((val, i) => (
             <Tab
               label={
-                <Typography sx={{ fontSize: 14, fontFamily: roboto.style }}>
+                <Typography sx={{ fontSize: 18, fontFamily: roboto.style }}>
                   {val.label}
                 </Typography>
               }
@@ -56,9 +76,9 @@ const Courses = () => {
         {data.courseTypeProduct.map((_, i) => (
           <TabPanel value={value} index={i}>
             <Grid2 container sx={{ mt: 3 }} spacing={4}>
-              {COURSESDATA.map((val, index) => (
-                <Grid2 size={{ lg: 4, xs: 12 }}>
-                  <CourseCard
+              {courseData.map((val, index) => (
+                <Grid2 size={{ lg: 3, xs: 12 }} data-aos="fade-up" key={index}>
+                  {/* <CourseCard
                     img={val.img}
                     title={val.title}
                     tutorName={val.tutorName}
@@ -67,6 +87,11 @@ const Courses = () => {
                     category={val.category}
                     lessons={val.lessons}
                     time={val.time}
+                  /> */}
+                  <TechCard
+                    img={val.img}
+                    title={val.title}
+                    course={val.course}
                   />
                 </Grid2>
               ))}
@@ -109,7 +134,7 @@ const Courses = () => {
           </Swiper>
         </Box> */}
       </Container>
-    </div>
+    </Box>
   );
 };
 

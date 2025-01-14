@@ -305,4 +305,10 @@ export const data = {
       label: COURSE_TYPE.BUSINESS,
     },
   ],
+
+  contactCardData: [
+    {
+      icon: Phone,
+    },
+  ],
 };
