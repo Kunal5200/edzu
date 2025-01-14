@@ -24,61 +24,73 @@ const Courses = () => {
     setValue(newValue);
   };
   return (
-    <Box sx={{ backgroundColor: COLORS.SECONDARY, pt: 5, pb: 5,height:{lg:"70vh",xs:"100%"} }}>
-      <Typography
-        sx={{
-          fontSize: 14,
-          fontFamily: roboto.style,
-          textTransform: "uppercase",
-          textAlign: "center",
-          color: COLORS.BLUE,
-          letterSpacing: 3,
-        }}
-      >
-        DISCOVER COURSES
-      </Typography>
-      <Typography
-        sx={{
-          fontSize: 30,
-          fontFamily: roboto.style,
-          textAlign: "center",
-          color: COLORS.BLUE,
-          fontWeight: 600,
-          mt: 2,
-        }}
-      >
-        Our Popular Online Courses
-      </Typography>
-      <Container sx={{ mt: 3 }}>
-        <Tabs
-          onChange={tabChangeHandler}
-          value={value}
+    <Box
+      sx={{
+        backgroundColor: COLORS.SECONDARY,
+        pt: 5,
+        pb: 5,
+        height: { lg: "100vh", xs: "100%" },
+      }}
+    >
+      <Box sx={{ pt: 5 }}>
+        <Typography
           sx={{
-            "& .Mui-selected": {
-              color: `${COLORS.BLUE} !important`,
-            },
-            "& .MuiTabs-indicator": {
-              backgroundColor: COLORS.BLUE,
-            },
+            fontSize: 14,
+            fontFamily: roboto.style,
+            textTransform: "uppercase",
+            textAlign: "center",
+            color: COLORS.BLUE,
+            letterSpacing: 3,
           }}
         >
-          {data.courseTypeProduct.map((val, i) => (
-            <Tab
-              label={
-                <Typography sx={{ fontSize: 18, fontFamily: roboto.style }}>
-                  {val.label}
-                </Typography>
-              }
-              key={i}
-            />
-          ))}
-        </Tabs>
-        {data.courseTypeProduct.map((_, i) => (
-          <TabPanel value={value} index={i}>
-            <Grid2 container sx={{ mt: 3 }} spacing={4}>
-              {courseData.map((val, index) => (
-                <Grid2 size={{ lg: 3, xs: 12 }} data-aos="fade-up" key={index}>
-                  {/* <CourseCard
+          DISCOVER COURSES
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: 30,
+            fontFamily: roboto.style,
+            textAlign: "center",
+            color: COLORS.BLUE,
+            fontWeight: 600,
+            mt: 2,
+          }}
+        >
+          Our Popular Online Courses
+        </Typography>
+        <Container sx={{ mt: 3 }}>
+          <Tabs
+            onChange={tabChangeHandler}
+            value={value}
+            sx={{
+              "& .Mui-selected": {
+                color: `${COLORS.BLUE} !important`,
+              },
+              "& .MuiTabs-indicator": {
+                backgroundColor: COLORS.BLUE,
+              },
+            }}
+          >
+            {data.courseTypeProduct.map((val, i) => (
+              <Tab
+                label={
+                  <Typography sx={{ fontSize: 18, fontFamily: roboto.style }}>
+                    {val.label}
+                  </Typography>
+                }
+                key={i}
+              />
+            ))}
+          </Tabs>
+          {data.courseTypeProduct.map((_, i) => (
+            <TabPanel value={value} index={i}>
+              <Grid2 container sx={{ mt: 3 }} spacing={4}>
+                {courseData.map((val, index) => (
+                  <Grid2
+                    size={{ lg: 3, xs: 12 }}
+                    data-aos="fade-up"
+                    key={index}
+                  >
+                    {/* <CourseCard
                     img={val.img}
                     title={val.title}
                     tutorName={val.tutorName}
@@ -88,18 +100,18 @@ const Courses = () => {
                     lessons={val.lessons}
                     time={val.time}
                   /> */}
-                  <TechCard
-                    img={val.img}
-                    title={val.title}
-                    course={val.course}
-                  />
-                </Grid2>
-              ))}
-            </Grid2>
-          </TabPanel>
-        ))}
+                    <TechCard
+                      img={val.img}
+                      title={val.title}
+                      course={val.course}
+                    />
+                  </Grid2>
+                ))}
+              </Grid2>
+            </TabPanel>
+          ))}
 
-        {/* <Box>
+          {/* <Box>
           <Swiper
             grabCursor
             breakpoints={{
@@ -133,7 +145,8 @@ const Courses = () => {
             ))}
           </Swiper>
         </Box> */}
-      </Container>
+        </Container>
+      </Box>
     </Box>
   );
 };
