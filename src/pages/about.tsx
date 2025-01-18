@@ -11,36 +11,11 @@ import aboutService from "@/banner/about-service.png";
 import { data } from "@/assest/data";
 import successOriented from "@/banner/success-oriented.png";
 import Testimonial from "@/component/testimonial";
+import CustomBanner from "@/component/customBanner";
 const About = () => {
   return (
     <div>
-      <Box
-        sx={{
-          backgroundImage: `url(${banner.src})`,
-          height: { lg: 350, xs: 200 },
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        <Container>
-          <Typography
-            sx={{
-              fontSize: { lg: 50, xs: 30 },
-              fontFamily: roboto.style,
-              color: COLORS.WHITE,
-              fontWeight: 600,
-              textAlign: "center",
-            }}
-          >
-            About Us
-          </Typography>
-        </Container>
-      </Box>
+      <CustomBanner img={banner.src} heading="About us" />
       <Box sx={{ pt: 8, pb: 8 }}>
         <AboutPage />
       </Box>

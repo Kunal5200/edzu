@@ -14,6 +14,7 @@ import banner from "@/banner/contact-banner.jpg";
 import ContactCard from "@/component/contact/contactcard";
 import { data } from "@/assest/data";
 import { Email, LocationOn, Phone } from "@mui/icons-material";
+import CustomBanner from "@/component/customBanner";
 const Contact = () => {
   const contact = [
     {
@@ -34,7 +35,7 @@ const Contact = () => {
   ];
   return (
     <div>
-      <Box
+      {/* <Box
         sx={{
           backgroundImage: `url(${banner.src})`,
           height: { lg: 350, xs: 200 },
@@ -60,7 +61,8 @@ const Contact = () => {
             Contact Us
           </Typography>
         </Container>
-      </Box>
+      </Box> */}
+      <CustomBanner img={banner.src} heading="Contact Us" />
       <Box sx={{ pt: 6, pb: 6 }}>
         <Container>
           <Grid2 container spacing={4}>
@@ -76,7 +78,7 @@ const Contact = () => {
           </Grid2>
         </Container>
       </Box>
-      <Box sx={{ backgroundColor: COLORS.BANNER_COLOR, p: {lg:5,xs:2} }}>
+      <Box sx={{ backgroundColor: COLORS.BANNER_COLOR, p: { lg: 5, xs: 2 } }}>
         <Container>
           <Typography
             sx={{
@@ -135,13 +137,18 @@ const Contact = () => {
                         resize: "none",
                       }}
                       minRows={5}
+                      placeholder="Message"
+                      className="textArea"
                     />
                   </Grid2>
                   <Grid2 size={12}>
                     <Button
                       sx={{
                         backgroundColor: COLORS.PRIMARY,
-                        color: COLORS.BLACK,
+                        color: COLORS.WHITE,
+                        fontFamily: roboto.style,
+                        width: 180,
+                        p: 1,
                       }}
                     >
                       Send Message

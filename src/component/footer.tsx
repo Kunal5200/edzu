@@ -25,7 +25,7 @@ const Footer = () => {
         sx={{
           backgroundColor: COLORS.FOOTERBG,
           p: 3,
-          height: { lg: "55vh", xs: "100%" },
+          height: { lg: "100%", xs: "100%" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

@@ -37,7 +37,7 @@ const Header = () => {
       sx={{
         p: 1,
         position: isScrolling ? "fixed" : "relative",
-        width: "100%",
+        width: isScrolling ? "100%" : "98%",
         top: 0,
         backgroundColor: isScrolling ? "#ffffff50" : "#ffffff",
         backdropFilter: "blur(5px)",

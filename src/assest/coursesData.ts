@@ -4,7 +4,7 @@ import img3 from "@/course/img3.jpg";
 import img4 from "@/course/img4.jpg";
 import img5 from "@/course/img5.jpg";
 import img6 from "@/course/img6.jpg";
-import { COURSE_PROPS } from "@/utils/types";
+import { COURSE_PROPS, COURSECARDPROPS } from "@/utils/types";
 export const COURSESDATA: COURSE_PROPS[] = [
   {
     img: img1.src,
@@ -60,4 +60,59 @@ export const COURSESDATA: COURSE_PROPS[] = [
   //   {
   //     img: img6,
   //   },
+];
+
+export const COURSE_DATA: COURSECARDPROPS[] = [
+  {
+    heading: "Artificial Intelligence",
+    price: "8500",
+  },
+  {
+    heading: "Cyber Security",
+    price: "8500",
+  },
+  {
+    heading: "Data Science",
+    price: "8500",
+  },
+  {
+    heading: "Machine Learning",
+    price: "8500",
+  },
+  {
+    heading: "Web Development",
+    price: "8500",
+  },
+  {
+    heading: "UI/UX Design",
+    price: "8500",
+  },
+  {
+    heading: "Iot & Robotics",
+    price: "8500",
+  },
+  {
+    heading: "Cloud Computing",
+    price: "8500",
+  },
+  {
+    heading: "Embedded System",
+    price: "8500",
+  },
+  {
+    heading: "Hybrid & Electric Vehicle",
+    price: "8500",
+  },
+  {
+    heading: "Auto CAD",
+    price: "8500",
+  },
+  {
+    heading: "Fashion Designing",
+    price: "8500",
+  },
+  {
+    heading: "DIGITAL MARKETING",
+    price: "8500",
+  },
 ];

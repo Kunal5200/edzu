@@ -7,10 +7,12 @@ import { SyntheticEvent, useState } from "react";
 import TabPanel from "../tabpanel";
 import TechCard from "./techCard";
 import { BUSINESS } from "@/assest/business";
+import { useRouter } from "next/router";
 
 const Courses = () => {
   const [value, setValue] = useState(0);
   const [courseData, setCourseData] = useState(TECHDATA);
+  const router = useRouter();
   const tabChangeHandler = (e: SyntheticEvent, newValue: number) => {
     const target = e.target as HTMLElement;
     const text = target.innerText || "";
@@ -23,6 +25,11 @@ const Courses = () => {
     }
     setValue(newValue);
   };
+
+  const changePage = (id: string) => {
+    router.push(`/courses/${id}`);
+  };
+
   return (
     <Box
       sx={{
@@ -104,6 +111,8 @@ const Courses = () => {
                       img={val.img}
                       title={val.title}
                       course={val.course}
+                      onClick={() => changePage(val.id)}
+                      id={val.id}
                     />
                   </Grid2>
                 ))}

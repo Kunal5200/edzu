@@ -4,7 +4,7 @@ import { roboto } from "@/utils/fonts";
 import { TECHDATAPROPS } from "@/utils/types";
 import { Box, CardActionArea, Typography } from "@mui/material";
 import Image from "next/image";
-const TechCard = ({ img, title, course }: TECHDATAPROPS) => {
+const TechCard = ({ img, title, course,onClick,id }: TECHDATAPROPS) => {
   return (
     <div>
       <CardActionArea
@@ -13,6 +13,7 @@ const TechCard = ({ img, title, course }: TECHDATAPROPS) => {
           boxShadow: "0px 0px 3px 3px rgb(0,0,0,0.10)",
           backgroundColor: COLORS.WHITE,
         }}
+        onClick={onClick}
       >
         <Box sx={{ textAlign: "center" }}>
           {/* <Code sx={{ color: COLORS.WHITE, fontSize: 40 }} /> */}

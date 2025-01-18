@@ -1,16 +1,19 @@
 import { COLORS, COURSE_TYPE, HEADER_LINKS } from "@/utils/enum";
 import {
   AcUnit,
+  CalendarMonth,
   Computer,
   DoneAll,
   Email,
   EmailOutlined,
   EmojiEvents,
   EmojiObjects,
+  Grade,
   LibraryBooksOutlined,
   LocationOn,
   Mood,
   MoreVert,
+  People,
   Person2,
   Phone,
   PhoneAndroid,
@@ -18,30 +21,39 @@ import {
 } from "@mui/icons-material";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
-
+import certificate1 from "@/certificate/img-1.jpg";
+import certificate2 from "@/certificate/img-2.jpg";
+import certificate3 from "@/certificate/img-3.jpg";
+import certificate4 from "@/certificate/img-4.jpg";
+import certificate5 from "@/certificate/img-5.jpg";
+import certificate6 from "@/certificate/img-6.jpg";
+import certificate7 from "@/certificate/img-7.jpg";
 export const data = {
   contactHeader: [
     {
       icon: Phone,
-      text: "Call : 9582004819",
+      text: "Call : +91 9560021531",
     },
     {
       icon: Email,
-      text: "Email :info@edzu.in",
+      text: "Email : edzuedtech@gmail.com",
     },
   ],
   socialIcons: [
     {
       icon: FaFacebookF,
+      url: "https://www.facebook.com/profile.php?id=100090065978318",
     },
-    {
-      icon: X,
-    },
+    // {
+    //   icon: X,
+    // },
     {
       icon: FaLinkedinIn,
+      url: "https://www.linkedin.com/company/edzu-edtech/",
     },
     {
       icon: FaInstagram,
+      url: "https://www.instagram.com/edzu.in/",
     },
   ],
   headerLinks: [
@@ -56,7 +68,7 @@ export const data = {
     {
       label: HEADER_LINKS.PROGRAMS,
       url: "/courses",
-      icon: true,
+      // icon: true,
     },
     {
       label: HEADER_LINKS.COMBOPACKS,
@@ -123,35 +135,35 @@ export const data = {
   connectionData: [
     {
       number: "01",
-      heading: "Exclusive Advisor",
+      heading: "Top Mentorship",
       content:
-        "Nulla quis lorem ut libero malesuada feugiat pellentesque in ipsum id orci porta dapibus donec sollicitudin molestie malesuada quisque velit nisi pretium ut lacinia.",
+        "Expert guidance from industry leaders to enhance skills, build confidence, and achieve career goals.",
     },
     {
       number: "02",
-      heading: "Reached Your Goals",
+      heading: "Digital Access",
       content:
-        "Nulla quis lorem ut libero malesuada feugiat pellentesque in ipsum id orci porta dapibus donec sollicitudin molestie malesuada quisque velit nisi pretium ut lacinia.",
+        "Seamless online learning through high-quality resources, tools, and platforms accessible anytime, anywhere.",
     },
     {
       number: "03",
-      heading: "Digital Laboratory",
+      heading: "Government-Certified Certificates",
       content:
-        "Nulla quis lorem ut libero malesuada feugiat pellentesque in ipsum id orci porta dapibus donec sollicitudin molestie malesuada quisque velit nisi pretium ut lacinia.",
+        "Earn official certifications recognized by leading organizations, boosting your professional credibility and career opportunities.",
     },
   ],
   footerContact: [
     {
       icon: LocationOn,
-      label: "Delhi-Meerut road, Ghaziabad,UP India",
+      label: "194-A, Prakash Industrial Estate, Uttar Pradesh ",
     },
     {
       icon: PhoneAndroid,
-      label: "+91 9354678205",
+      label: "+91 9560021531",
     },
     {
       icon: EmailOutlined,
-      label: "kunalsharma5868@gmail.com",
+      label: "edzuedtech@gmail.com",
     },
   ],
   footerLinks: [
@@ -159,19 +171,19 @@ export const data = {
       heading: "Support",
       list: [
         {
-          label: "Home",
-        },
-        {
-          label: "About Us",
-        },
-        {
-          label: "Contact",
+          label: "Home Page",
         },
         {
           label: "Privacy Policy",
         },
         {
-          label: "Terms & Conditions",
+          label: "Refund Policy",
+        },
+        {
+          label: "Privacy Policy",
+        },
+        {
+          label: "Terms and Conditions",
         },
       ],
     },
@@ -179,17 +191,32 @@ export const data = {
       heading: "UseFul Links",
       list: [
         {
-          label: "Graphic Design",
-        },
-        {
-          label: "Photography",
-        },
-        {
-          label: "Web Design",
-        },
-        {
           label: "Web Development",
         },
+        {
+          label: "Artificial Intelligence",
+        },
+        {
+          label: "Data Science",
+        },
+        {
+          label: "Machine Learning",
+        },
+        {
+          label: "Mobile App Development",
+        },
+        // {
+        //   label: "Digital Marketing",
+        // },
+        // {
+        //   label: "Finance",
+        // },
+        // {
+        //   label: "Human Resource",
+        // },
+        // {
+        //   label: "Combo Packs",
+        // },
       ],
     },
   ],
@@ -309,6 +336,77 @@ export const data = {
   contactCardData: [
     {
       icon: Phone,
+    },
+  ],
+
+  comboPackData: [
+    {
+      label: "Tech Starter",
+      value: "12+ Diverse Courses",
+    },
+    {
+      label: "MBA Lite",
+      value: "10+ Diverse Courses",
+    },
+    {
+      label: "More",
+      value: "2+ Diverse Courses",
+    },
+  ],
+  courseBenefits: [
+    {
+      label: "Mockup Interviews",
+    },
+    {
+      label: "Value Packs",
+    },
+    {
+      label: "Placement Assistance",
+    },
+  ],
+
+  goldenPassData: [
+    {
+      label: "Completion Rate",
+      value: "91%",
+      icon: People,
+    },
+    {
+      label: "Live engagement",
+      value: "95%",
+      icon: CalendarMonth,
+    },
+    {
+      label: "Student Satisfaction",
+      value: "93%",
+      icon: Grade,
+    },
+  ],
+
+  certificateData: [
+    {
+      img: certificate1,
+    },
+    {
+      img: certificate2,
+    },
+    {
+      img: certificate3,
+    },
+    {
+      img: certificate4,
+    },
+    {
+      img: certificate5,
+    },
+    {
+      img: certificate6,
+    },
+    {
+      img: certificate7,
+    },
+    {
+      img: certificate6,
     },
   ],
 };

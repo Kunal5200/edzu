@@ -58,7 +58,7 @@ const AboutSection = () => {
                 mt: 1,
               }}
             >
-              Newcomers will benefit greatly from doing our feature courses
+              Pick a course and don’t be a fresher anymore.
             </Typography>
             <Typography
               sx={{

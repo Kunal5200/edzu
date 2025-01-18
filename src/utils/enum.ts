@@ -11,6 +11,8 @@ export enum COLORS {
   SECTIONBG = "#E7F0FD",
   FOOTERBG = "#12141B",
   TRANSPARENT = "transparent",
+  LIGHT_BLUE = "#BDD7E7",
+  FAQBG = "#F2F2FE",
 }
 
 export enum HEADER_LINKS {
@@ -24,4 +26,15 @@ export enum HEADER_LINKS {
 export enum COURSE_TYPE {
   TECH = "TECH & DATA",
   BUSINESS = "BUSINESS",
+}
+
+export enum COURSE_IDS {
+  WEB_DEVELOPMENT = "web-development",
+  ARTIFICIAL_INTELLIGENCE = "artificial-intelligence",
+  DATA_SCIENCE = "data-science",
+  MACHINE_LEARNING = "machine-learning",
+  MOBILE_APP_DEVELOPMENT = "mobile-app-development",
+  DIGITAL_MARKETING = "digital-marketing",
+  FINANCE = "finance",
+  HUMAN_RESOURCE = "human-resource",
 }

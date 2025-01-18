@@ -8,9 +8,9 @@ import React from "react";
 const SubHeader = () => {
   return (
     <Box sx={{ backgroundColor: COLORS.PRIMARY, p: 1 }}>
-      <Container  >
+      <Container>
         <Stack
-          direction={{lg:"row",xs:"column"}}
+          direction={{ lg: "row", xs: "column" }}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
@@ -26,7 +26,7 @@ const SubHeader = () => {
                   sx={{
                     color: COLORS.WHITE,
                     fontFamily: kanit.style,
-                    fontSize: 14,
+                    fontSize: { lg: 14, xs: 12 },
                   }}
                 >
                   {val.text}
@@ -40,13 +40,13 @@ const SubHeader = () => {
                 sx={{
                   svg: {
                     color: COLORS.WHITE,
-                    fontSize: 20,
+                    fontSize: { lg: 20, xs: 15 },
                     transition: "0.5s ease all",
                   },
                   ":hover": {
                     svg: {
                       transform: " scale(0.9)",
-                    //   color: COLORS.MINT_GREEN,
+                      //   color: COLORS.MINT_GREEN,
                     },
                   },
                 }}

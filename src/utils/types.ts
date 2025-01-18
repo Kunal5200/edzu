@@ -53,10 +53,41 @@ export interface TECHDATAPROPS {
   img: StaticImageData;
   title: string;
   course: string;
+  onClick?: () => void;
+  id: string;
 }
 
 export interface CONTACTCARDPROPS {
   icon: ReactNode;
   heading: string;
   value: string;
+}
+
+export interface BannerProps {
+  img: string;
+  heading: string | undefined;
+}
+
+export interface COURSECARDPROPS {
+  heading: string;
+  price: string;
+}
+
+export interface FAQPROS {
+  label: string;
+  value: string;
+}
+
+interface COURSE_DETAILS_PROPS {
+  heading: string;
+  list: LIST[];
+}
+
+export interface COURSE_DETAILS {
+  heading: string;
+  description: string;
+  highlight: COURSE_DETAILS_PROPS;
+  benefits: COURSE_DETAILS_PROPS;
+  outline: COURSE_DETAILS_PROPS[];
+  pageTitle: string;
 }
