@@ -68,7 +68,7 @@ export const data = {
     {
       label: HEADER_LINKS.PROGRAMS,
       url: "/courses",
-      // icon: true,
+      icon: false,
     },
     {
       label: HEADER_LINKS.COMBOPACKS,
