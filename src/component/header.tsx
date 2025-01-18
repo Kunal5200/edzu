@@ -56,23 +56,24 @@ const Header = () => {
             <Image src={logo} alt="" width={90} />
           </Link>
           <Stack direction={"row"} alignItems={"center"} spacing={4}>
-            {data.headerLinks.map((val, i) =>
-              val.icon ? (
-                <Typography
-                  sx={{
-                    fontSize: 16,
-                    fontFamily: roboto.style,
-                    fontWeight: 400,
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 0.5,
-                    cursor: "pointer",
-                  }}
-                  key={i}
-                >
-                  {val.label} <ExpandMore />
-                </Typography>
-              ) : (
+            {data.headerLinks.map(
+              (val, i) => (
+                // val.icon ? (
+                //   <Typography
+                //     sx={{
+                //       fontSize: 16,
+                //       fontFamily: roboto.style,
+                //       fontWeight: 400,
+                //       display: "flex",
+                //       alignItems: "center",
+                //       gap: 0.5,
+                //       cursor: "pointer",
+                //     }}
+                //     key={i}
+                //   >
+                //     {val.label} <ExpandMore />
+                //   </Typography>
+                // ) : (
                 <Typography
                   sx={{
                     fontSize: 16,
@@ -103,6 +104,7 @@ const Header = () => {
                   {val.label}{" "}
                 </Typography>
               )
+              // )
             )}
           </Stack>
         </Stack>
