@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import banner from "@/banner/course-detail.jpg";
 import { useRouter } from "next/router";
-import { COURSE_IDS } from "@/utils/enum";
+import { COLORS, COURSE_IDS } from "@/utils/enum";
 import { WEB_DEVELOPMENT } from "@/assest/webDevelopment";
 import { COURSE_DETAILS } from "@/utils/types";
 import CustomBanner from "@/component/customBanner";
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Backdrop,
   Box,
   Card,
@@ -21,7 +24,14 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import image from "@/course/webDevelopment.jpg";
-import { StarBorderOutlined } from "@mui/icons-material";
+import {
+  AddCircle,
+  Done,
+  ExpandMore,
+  Remove,
+  RemoveCircle,
+  StarBorderOutlined,
+} from "@mui/icons-material";
 import Plans from "@/component/plans";
 import { PRICINGPLAN } from "@/assest/pricingPlan";
 import Testimonial from "@/component/testimonial";
@@ -29,46 +39,50 @@ import Certification from "@/component/combopack/certification";
 import Faq from "@/component/combopack/faq";
 import { ARTIFICICAL_INTELLIGENCE } from "@/assest/artificialIntelligence";
 import { DATA_SCIENCE } from "@/assest/dataScience";
+import { MACHINE_LEARNING } from "@/assest/machineLearning";
+import { MOBILEAPP_DEVELOPMENT } from "@/assest/mobile-app-debelopment";
+import { Digital_MARKETING } from "@/assest/digital_marketing";
+import { FINANCE } from "@/assest/finance";
+import { HUMAN_RESOURCE } from "@/assest/human-resource";
 const CourseDetails = () => {
   const [data, setData] = useState<COURSE_DETAILS | null>();
 
   const router = useRouter();
   const [loading, setLoading] = useState(true);
-  const [isScrolling, setIsScrolling] = useState(false);
+  const [expanded, setExpanded] = useState<string | false>();
+  const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
+      setExpanded(newExpanded ? panel : false);
+    };
+
+  const courseDataMap: Record<string, COURSE_DETAILS> = {
+    [COURSE_IDS.WEB_DEVELOPMENT]: WEB_DEVELOPMENT,
+    [COURSE_IDS.ARTIFICIAL_INTELLIGENCE]: ARTIFICICAL_INTELLIGENCE,
+    [COURSE_IDS.DATA_SCIENCE]: DATA_SCIENCE,
+    [COURSE_IDS.MACHINE_LEARNING]: MACHINE_LEARNING,
+    [COURSE_IDS.MOBILE_APP_DEVELOPMENT]: MOBILEAPP_DEVELOPMENT,
+    [COURSE_IDS.DIGITAL_MARKETING]: Digital_MARKETING,
+    [COURSE_IDS.FINANCE]: FINANCE,
+    [COURSE_IDS.HUMAN_RESOURCE]: HUMAN_RESOURCE,
+  };
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleScroll = () => {
-        const currentScroll = window.pageYOffset;
-        // setScrollPosition(currentScroll);
-        setIsScrolling(currentScroll > 0);
-      };
+    const { slug } = router.query;
 
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (router.query.slug === COURSE_IDS.WEB_DEVELOPMENT) {
-      setTimeout(() => {
-        setData(WEB_DEVELOPMENT);
+    if (slug && typeof slug === "string") {
+      const selectedCourse = courseDataMap[slug];
+      if (selectedCourse) {
+        setLoading(true);
+        setTimeout(() => {
+          setData(selectedCourse);
+          setLoading(false);
+        }, 2000);
+      } else {
+        setData(null);
         setLoading(false);
-      }, 2000);
+      }
     }
-    if (router.query.slug === COURSE_IDS.ARTIFICIAL_INTELLIGENCE) {
-      setTimeout(() => {
-        setData(ARTIFICICAL_INTELLIGENCE);
-        setLoading(false);
-      }, 2000);
-    }
-    if (router.query.slug === COURSE_IDS.DATA_SCIENCE) {
-      setTimeout(() => {
-        setData(DATA_SCIENCE);
-        setLoading(false);
-      }, 2000);
-    }
-  }, [router.query]);
+  }, [router.query.slug]);
   return (
     <div>
       <CustomBanner heading={data?.pageTitle} img={banner.src} />
@@ -77,18 +91,18 @@ const CourseDetails = () => {
           <CircularProgress />
         </Backdrop>
       ) : (
-        <Box sx={{ mt: 7 }}>
+        <Box sx={{ pt: 7, backgroundColor: COLORS.FAQBG }}>
           <Container>
             <Grid2 container spacing={4}>
               <Grid2 size={{ lg: 8, xs: 12 }}>
-                <Box sx={{ height: 400 }}>
+                {/* <Box sx={{ height: 400 }}>
                   <Image
                     src={image}
                     alt=""
                     className="img-fluid"
                     style={{ objectFit: "cover" }}
                   />
-                </Box>
+                </Box> */}
                 <Typography sx={{ fontSize: 30, mt: 4, mb: 2 }}>
                   Overview
                 </Typography>
@@ -97,7 +111,7 @@ const CourseDetails = () => {
                   {data?.description}
                 </Typography>
                 <Grid2 container spacing={5}>
-                  <Grid2 size={{ lg: 6, xs: 12 }}>
+                  <Grid2 size={{ lg: 12, xs: 12 }}>
                     <Typography sx={{ fontSize: 20, mt: 2 }}>
                       {data?.highlight.heading}
                     </Typography>
@@ -105,11 +119,11 @@ const CourseDetails = () => {
                       {data?.highlight.list.map((val, i) => (
                         <ListItem key={i} disablePadding>
                           <ListItemAvatar sx={{ minWidth: 40 }}>
-                            <StarBorderOutlined />
+                            <Done htmlColor={COLORS.PRIMARY} />
                           </ListItemAvatar>
                           <ListItemText
                             primary={
-                              <Typography sx={{ fontSize: 14,  }}>
+                              <Typography sx={{ fontSize: 14 }}>
                                 {val.label}
                               </Typography>
                             }
@@ -118,7 +132,7 @@ const CourseDetails = () => {
                       ))}
                     </List>
                   </Grid2>
-                  <Grid2 size={{ lg: 6, xs: 12 }}>
+                  <Grid2 size={{ lg: 12, xs: 12 }}>
                     <Typography sx={{ fontSize: 20, mt: 2 }}>
                       {data?.benefits.heading}
                     </Typography>
@@ -126,11 +140,11 @@ const CourseDetails = () => {
                       {data?.benefits.list.map((val, i) => (
                         <ListItem key={i} disablePadding>
                           <ListItemAvatar sx={{ minWidth: 40 }}>
-                            <StarBorderOutlined />
+                            <Done htmlColor={COLORS.PRIMARY} />
                           </ListItemAvatar>
                           <ListItemText
                             primary={
-                              <Typography sx={{ fontSize: 14,  }}>
+                              <Typography sx={{ fontSize: 14 }}>
                                 {val.label}
                               </Typography>
                             }
@@ -141,7 +155,7 @@ const CourseDetails = () => {
                   </Grid2>
                 </Grid2>
                 <Typography sx={{ fontSize: 30, mt: 4 }}>Outline : </Typography>
-                <Grid2 container spacing={5} mt={4}>
+                {/* <Grid2 container spacing={5} mt={4}>
                   {data?.outline.map((val, i) => (
                     <Grid2 size={{ lg: 6, xs: 12 }} key={i}>
                       <Typography sx={{ fontSize: 20 }}>
@@ -164,6 +178,52 @@ const CourseDetails = () => {
                           </ListItem>
                         ))}
                       </List>
+                    </Grid2>
+                  ))}
+                </Grid2> */}
+                <Grid2 container spacing={2} mt={2}>
+                  {data?.outline.map((val, i) => (
+                    <Grid2 size={12}>
+                      <Accordion
+                        sx={{ boxShadow: "0px 0px 2px 3px rgb(0,0,0,0.10)" }}
+                        onChange={handleChange(`panel${i}`)}
+                        expanded={expanded === `panel${i}`}
+                      >
+                        <AccordionSummary
+                          expandIcon={
+                            expanded === `panel${i}` ? (
+                              <RemoveCircle htmlColor={COLORS.PRIMARY} />
+                            ) : (
+                              <AddCircle />
+                            )
+                          }
+                          sx={{ borderBottom: "1px solid #d7d7d7" }}
+                        >
+                          <Typography sx={{ fontSize: 15, fontWeight: 550 }}>
+                            {val.heading}
+                          </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                          <List>
+                            {val.list.map((val, i) => (
+                              <ListItem key={i} disablePadding>
+                                <ListItemAvatar sx={{ minWidth: 40 }}>
+                                  <StarBorderOutlined
+                                    htmlColor={COLORS.PRIMARY}
+                                  />
+                                </ListItemAvatar>
+                                <ListItemText
+                                  primary={
+                                    <Typography sx={{ fontSize: 14 }}>
+                                      {val.label}
+                                    </Typography>
+                                  }
+                                />
+                              </ListItem>
+                            ))}
+                          </List>
+                        </AccordionDetails>
+                      </Accordion>
                     </Grid2>
                   ))}
                 </Grid2>

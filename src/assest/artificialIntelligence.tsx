@@ -23,7 +23,7 @@ export const ARTIFICICAL_INTELLIGENCE: COURSE_DETAILS = {
     ],
   },
   benefits: {
-    heading: "Benefits of Mastering Web Development",
+    heading: "Benefits of Mastering Artificial Intelligence",
     list: [
       {
         label: "22K+ Jobs Opening",

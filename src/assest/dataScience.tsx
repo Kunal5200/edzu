@@ -23,7 +23,7 @@ export const DATA_SCIENCE: COURSE_DETAILS = {
     ],
   },
   benefits: {
-    heading: "Benefits of Mastering Web Development",
+    heading: "Benefits of Mastering Data Science",
     list: [
       {
         label: "18K+ Jobs Opening",
