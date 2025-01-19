@@ -28,6 +28,7 @@ import Testimonial from "@/component/testimonial";
 import Certification from "@/component/combopack/certification";
 import Faq from "@/component/combopack/faq";
 import { ARTIFICICAL_INTELLIGENCE } from "@/assest/artificialIntelligence";
+import { DATA_SCIENCE } from "@/assest/dataScience";
 const CourseDetails = () => {
   const [data, setData] = useState<COURSE_DETAILS | null>();
 
@@ -58,6 +59,12 @@ const CourseDetails = () => {
     if (router.query.slug === COURSE_IDS.ARTIFICIAL_INTELLIGENCE) {
       setTimeout(() => {
         setData(ARTIFICICAL_INTELLIGENCE);
+        setLoading(false);
+      }, 2000);
+    }
+    if (router.query.slug === COURSE_IDS.DATA_SCIENCE) {
+      setTimeout(() => {
+        setData(DATA_SCIENCE);
         setLoading(false);
       }, 2000);
     }
@@ -102,7 +109,7 @@ const CourseDetails = () => {
                           </ListItemAvatar>
                           <ListItemText
                             primary={
-                              <Typography sx={{ fontSize: 14, mt: 1 }}>
+                              <Typography sx={{ fontSize: 14,  }}>
                                 {val.label}
                               </Typography>
                             }
@@ -123,7 +130,7 @@ const CourseDetails = () => {
                           </ListItemAvatar>
                           <ListItemText
                             primary={
-                              <Typography sx={{ fontSize: 14, mt: 1 }}>
+                              <Typography sx={{ fontSize: 14,  }}>
                                 {val.label}
                               </Typography>
                             }
@@ -149,7 +156,7 @@ const CourseDetails = () => {
                             </ListItemAvatar>
                             <ListItemText
                               primary={
-                                <Typography sx={{ fontSize: 14, mt: 1 }}>
+                                <Typography sx={{ fontSize: 14,  }}>
                                   {val.label}
                                 </Typography>
                               }
