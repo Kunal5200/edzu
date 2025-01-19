@@ -2,34 +2,33 @@ import { FAQPROS } from "@/utils/types";
 
 export const FAQDATA: FAQPROS[] = [
   {
-    label: "What are the timings of the classes ?",
+    label: "Is technical support available if I face platform issues?",
     value:
-      "Classes are tailored for convenience, kicking off after 6 PM to suit your busy schedules and commitments. Dive in when you're ready to learn!",
-  },
-  {
-    label: "How much time do I need to dedicate to the course each week?",
-    value:
-      "Whether you’re sprinting or pacing yourself, choose what works for you! We offer both self-paced and mentor-led formats to match your learning style.",
-  },
-  {
-    label: "Is there a pre-registration option available?",
-    value:
-      "Get ahead of the curve with a nominal pre-registration fee of ₹1000. Secure your spot and start transforming your career trajectory!",
+      "Absolutely! Our support team is just a whatsapp message away. Contact us at 9560021537 / 9560021531,  Monday to Saturday, 9 AM to 6 PM, for any assistance.",
   },
   {
     label: "Are there discussion forums or community platforms for students?",
     value:
-      "Join the vibrant community on WhatsApp! Engage, discuss, and grow with fellow learners and mentors by your side.",
+      "Yes! Join our active WhatsApp community to connect, discuss, and grow alongside fellow learners and mentors.",
   },
   {
-    label:
-      "Is technical support available if I encounter issues with the online platform?",
+    label: "Is there a pre-registration option available?",
     value:
-      "Our dedicated support team is just a call or an email away. Reach out to us at 8792243559 / 8147081557 or support@corizo.in from Monday to Saturday, 11 AM to 8 PM, for any assistance you need!",
+      "Secure your spot with a nominal pre-registration fee as you choses your plan.The Plans are starting from Rs.899/- only.  Get a head start on your career journey today!",
   },
   {
     label: "What is the refund policy?",
     value:
-      "Our courses are crafted with care and commitment, and as such, we do not offer refunds. We believe in the value and quality of our educational services!",
+      "As our courses are carefully designed to ensure quality and value, refunds are not offered. We are confident in the impact of our educational services!",
+  },
+  {
+    label: "How much time should I dedicate to the course weekly?",
+    value:
+      "The choice is yours! With training lite and training pro options, you can learn at a pace that fits your schedule.",
+  },
+  {
+    label: "What are the class timings?",
+    value:
+      "Classes are available 24x7 on your LMS portal, offering flexibility to suit your busy lifestyle and commitments. Join when you’re ready to learn!",
   },
 ];
