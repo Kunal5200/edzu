@@ -210,4 +210,27 @@ export const WEB_DEVELOPMENT: COURSE_DETAILS = {
       ],
     },
   ],
+  learning: [
+    {
+      label: "Hypertext Markup Language (HTML) ",
+    },
+    {
+      label: "Cascading Style Sheets(CSS)",
+    },
+    {
+      label: "Java Script Programming",
+    },
+    {
+      label: "Database with MongoDB",
+    },
+    {
+      label: "Object Oriented Programming",
+    },
+    {
+      label: "NodeJS",
+    },
+    {
+      label: "J Query",
+    },
+  ],
 };

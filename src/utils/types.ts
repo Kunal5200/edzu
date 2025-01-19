@@ -90,4 +90,13 @@ export interface COURSE_DETAILS {
   benefits: COURSE_DETAILS_PROPS;
   outline: COURSE_DETAILS_PROPS[];
   pageTitle: string;
+  learning: LIST[];
+}
+
+export interface PRICING_PLAN {
+  planType: string;
+  price: string;
+  benefits: LIST[];
+  url: string;
+  duration: string;
 }
