@@ -16,9 +16,16 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Footer = () => {
+  const router = useRouter();
+
+  const changePath = (path: string | undefined) => {
+    router.push(path ? path : "");
+  };
+
   return (
     <div>
       <Box
@@ -117,7 +124,11 @@ const Footer = () => {
                 />
                 <List>
                   {val.list.map((item, index) => (
-                    <ListItemButton key={i} sx={{ padding: 1 }}>
+                    <ListItemButton
+                      key={i}
+                      sx={{ padding: 1 }}
+                      onClick={() => changePath(item.url)}
+                    >
                       <ListItemAvatar sx={{ minWidth: { lg: 20, xs: 20 } }}>
                         <Box
                           sx={{

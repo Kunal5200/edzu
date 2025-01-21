@@ -28,9 +28,9 @@ const About = () => {
       <Box sx={{ pb: 8 }}>
         <Counter />
       </Box>
-      <Box sx={{ pb: 8 }}>
+      {/* <Box sx={{ pb: 8 }}>
         <AboutService img={successOriented} data={data.aboutSuccess} />
-      </Box>
+      </Box> */}
       <Box sx={{ pb: 8 }}>
         <Testimonial />
       </Box>

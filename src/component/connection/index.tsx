@@ -34,7 +34,7 @@ const Connection = () => {
             </Typography>
           </Grid2>
           <Grid2 size={{ lg: 6, xs: 12 }}>
-            <Typography
+            {/* <Typography
               sx={{
                 color: COLORS.TEXT,
                 fontFamily: roboto.style,
@@ -45,26 +45,28 @@ const Connection = () => {
               Nulla quis lorem ut libero malesuada feugiat. Pellentesque in
               ipsum id orci porta dapibus. Donec sollicitudin molestie
               malesuada.
-            </Typography>
+            </Typography> */}
             <Typography
               sx={{
                 color: COLORS.TEXT,
                 fontFamily: roboto.style,
                 fontWeight: 400,
                 fontSize: 15,
-                mt: 2,
               }}
             >
-              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-              posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
-              vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut
-              lacinia in, elementum id enim.
+              Our EdTech platform empowers growth through expert-designed
+              courses, hands-on training, and globally recognized
+              certifications. With flexible learning, mentorship, live projects,
+              internships, and career support, we prepare you for success in
+              fields like web development, data science, and finance. Transform
+              into a skilled professional and achieve your career aspirations
+              with us.
             </Typography>
           </Grid2>
         </Grid2>
         <Grid2 container mt={5} spacing={5}>
           {data.connectionData.map((val, i) => (
-            <Grid2 size={{ lg: 4, xs: 12}} key={i}>
+            <Grid2 size={{ lg: 4, xs: 12 }} key={i}>
               <ConnectionCard
                 number={val.number}
                 heading={val.heading}

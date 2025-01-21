@@ -100,3 +100,8 @@ export interface PRICING_PLAN {
   url: string;
   duration: string;
 }
+
+export interface SERVICE_PROPS {
+  img: StaticImageData;
+  label: string;
+}

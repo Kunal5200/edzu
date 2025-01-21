@@ -5,6 +5,7 @@ import "swiper/css";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Aos from "aos";
+import "animate.css";
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     Aos.init();

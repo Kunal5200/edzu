@@ -17,6 +17,7 @@ import { roboto } from "@/utils/fonts";
 import { Language } from "@mui/icons-material";
 import AboutCard from "./aboutCard";
 import { data } from "@/assest/data";
+import Link from "next/link";
 const AboutPage = () => {
   const phone = useMediaQuery("(max-width:600px)");
   return (
@@ -70,9 +71,12 @@ const AboutPage = () => {
                 mt: 2,
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              nisi ut aliquip ex ea commodo consequat.
+              Unlock your potential with our expertly designed online courses
+              tailored to meet industry demands. Whether you're aiming to
+              upskill, switch careers, or gain a competitive edge, our
+              comprehensive programs in technology, business, and marketing
+              empower you to achieve your professional goals from the comfort of
+              your home.
             </Typography>
             <Stack direction={"row"} alignItems={"center"} spacing={2} mt={2}>
               <Avatar sx={{ backgroundColor: COLORS.PRIMARY }}>
@@ -96,23 +100,30 @@ const AboutPage = () => {
               Education encompasses both the teaching and learning of knowledge,
               proper conduct, and technical competency.
             </Typography>
-            <Button
-              sx={{
-                backgroundColor: COLORS.PRIMARY,
-                borderRadius: 0,
-                color: COLORS.WHITE,
-                fontSize: 15,
-                fontFamily: roboto.style,
-                fontWeight: 500,
-                p: 1,
-                mt: 3,
-              }}
-            >
-              Start New Course
-            </Button>
+            <Link href={"/courses"}>
+              <Button
+                sx={{
+                  backgroundColor: COLORS.PRIMARY,
+                  borderRadius: 0,
+                  color: COLORS.WHITE,
+                  fontSize: 15,
+                  fontFamily: roboto.style,
+                  fontWeight: 500,
+                  p: 1,
+                  mt: 3,
+                  ":hover": {
+                    color: COLORS.PRIMARY,
+                    backgroundColor: COLORS.TRANSPARENT,
+                  },
+                  border: `2px solid ${COLORS.PRIMARY}`,
+                }}
+              >
+                Start New Course
+              </Button>
+            </Link>
           </Grid2>
         </Grid2>
-        <Grid2 container sx={{ mt: 20 }} spacing={5}>
+        {/* <Grid2 container sx={{ mt: 20 }} spacing={5}>
           {data.aboutData.map((val, i) => (
             <Grid2 size={{ lg: 4, xs: 12 }} key={i}>
               <AboutCard
@@ -122,7 +133,7 @@ const AboutPage = () => {
               />
             </Grid2>
           ))}
-        </Grid2>
+        </Grid2> */}
       </Container>
     </div>
   );

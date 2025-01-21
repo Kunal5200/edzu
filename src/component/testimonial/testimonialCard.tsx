@@ -13,7 +13,7 @@ const TestimonialCard = ({
 }: TESTIMONIAL_DATA) => {
   return (
     <div>
-      <Card sx={{ p: 3, mb: 2, mt: 2 }}>
+      <Card sx={{ p: 3, mb: 2, mt: 2,height:300 }}>
         <Stack direction={"row"} alignItems={"center"} spacing={2}>
           <Avatar sx={{ width: 60, height: 60 }}>
             <Image src={img} alt="" width={60} style={{ objectFit: "cover" }} />

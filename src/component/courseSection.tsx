@@ -32,9 +32,10 @@ const CourseSection = () => {
               <Typography
                 sx={{
                   color: val.textColor,
-                  fontSize: { lg: 20, xs: 18 },
+                  fontSize: { lg: 30, xs: 18 },
                   fontFamily: roboto.style,
                   fontWeight: 550,
+                  textAlign:"center"
                 }}
               >
                 {val.heading}
@@ -46,11 +47,12 @@ const CourseSection = () => {
                   fontFamily: roboto.style,
                   fontWeight: 400,
                   mt: 2,
+                  textAlign:"center"
                 }}
               >
                 {val.description}
               </Typography>
-              <Button
+              {/* <Button
                 sx={{
                   fontSize: 12,
                   fontFamily: roboto.style,
@@ -63,7 +65,7 @@ const CourseSection = () => {
                 endIcon={<Add />}
               >
                 View Courses
-              </Button>
+              </Button> */}
             </Grid2>
           ))}
         </Grid2>

@@ -15,29 +15,30 @@ import Image from "next/image";
 import { roboto } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
 import { Done } from "@mui/icons-material";
+import Link from "next/link";
 const AboutSection = () => {
   const benefits = [
     {
-      label: "Money-Back Guarantee",
+      label: "Government Certified Certificate",
     },
     {
-      label: "Certificate Of Completion",
+      label: "15+ Courses",
     },
     {
-      label: "Downloadable Resources",
+      label: "24*7 Available content",
     },
     {
-      label: "10+ More Lessons",
+      label: "Affordable prices",
     },
   ];
 
-  const phone=useMediaQuery("(max-width:600px)")
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <div>
       <Container>
         <Grid2 container>
           <Grid2 size={{ lg: 6, xs: 12 }}>
-            <Image src={aboutBanner} alt="" width={phone ?  400 :500} />
+            <Image src={aboutBanner} alt="" width={phone ? 400 : 500} />
           </Grid2>
           <Grid2 size={{ lg: 6, xs: 12 }}>
             <Typography
@@ -68,12 +69,14 @@ const AboutSection = () => {
                 mt: 1,
               }}
             >
-              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-              posuere cubilia Curae donec velit neque auctor sit amet aliquam
-              vel ullamcorper sit amet ligula quisque velit nisi pretium ut
-              lacinia in elementum id enim.
+              Break free from the "fresher" tag by choosing a course that
+              matches your career goals. Upskill with hands-on training,
+              industry certifications, and practical knowledge to stand out in
+              today's competitive job market. From web development to data
+              science, the right course can transform you into a skilled
+              professional.
             </Typography>
-            <Grid2 container mt={2}>
+            <Grid2 container mt={2} spacing={2}>
               {benefits.map((val, i) => (
                 <Grid2 size={{ lg: 6, xs: 12 }} key={i}>
                   <List>
@@ -109,21 +112,28 @@ const AboutSection = () => {
                 </Grid2>
               ))}
             </Grid2>
-            <Button
-              sx={{
-                mt: 2,
-                fontSize: 14,
-                fontFamily: roboto.style,
-                textTransform: "initial",
-                backgroundColor: COLORS.PRIMARY,
-                color: COLORS.WHITE,
-                width: 180,
-                borderRadius: 0,
-                p: 1,
-              }}
-            >
-              View All Courses
-            </Button>
+            <Link href={"/courses"}>
+              <Button
+                sx={{
+                  mt: 2,
+                  fontSize: 14,
+                  fontFamily: roboto.style,
+                  textTransform: "initial",
+                  backgroundColor: COLORS.PRIMARY,
+                  color: COLORS.WHITE,
+                  width: 180,
+                  borderRadius: 0,
+                  p: 1,
+                  ":hover": {
+                    color: COLORS.PRIMARY,
+                    backgroundColor: COLORS.TRANSPARENT,
+                  },
+                  border: `2px solid ${COLORS.PRIMARY}`,
+                }}
+              >
+                View All Courses
+              </Button>
+            </Link>
           </Grid2>
         </Grid2>
       </Container>

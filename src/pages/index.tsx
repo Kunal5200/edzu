@@ -4,6 +4,8 @@ import Connection from "@/component/connection";
 import Counter from "@/component/counter";
 import Courses from "@/component/courses";
 import CourseSection from "@/component/courseSection";
+import Herosection from "@/component/heroSection";
+import Services from "@/component/services";
 import Testimonial from "@/component/testimonial";
 import Training from "@/component/training";
 import { Box } from "@mui/material";
@@ -19,7 +21,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box>
-        <Banner />
+        {/* <Banner /> */}
+        <Herosection />
         <CourseSection />
         <Box sx={{ pt: 8, pb: 8 }}>
           <Courses />
@@ -37,7 +40,8 @@ export default function Home() {
           <Connection />
         </Box>
         <Box sx={{ pt: 8, pb: 8 }}>
-          <Training />
+          {/* <Training /> */}
+          <Services/>
         </Box>
       </Box>
     </>

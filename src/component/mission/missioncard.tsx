@@ -10,6 +10,7 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
+import Link from "next/link";
 import React, { useRef } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
@@ -42,7 +43,7 @@ const MissionCard = () => {
         </Typography>
         <Typography
           sx={{
-            fontSize: {lg:30,xs:20},
+            fontSize: { lg: 30, xs: 20 },
             fontFamily: roboto.style,
             color: COLORS.BLACK,
             fontWeight: 700,
@@ -119,7 +120,7 @@ const MissionCard = () => {
                 >
                   {val.content1}
                 </Typography>
-                <Typography
+                {/* <Typography
                   sx={{
                     fontSize: 14,
                     fontFamily: roboto.style,
@@ -129,21 +130,22 @@ const MissionCard = () => {
                   }}
                 >
                   {val.content2}
-                </Typography>
-                <Button
-                  endIcon={<Person className="end-icon" />}
-                  sx={{
-                    backgroundColor: COLORS.PRIMARY,
-                    color: COLORS.WHITE,
-                    mt: 2,
-                    borderRadius: 0,
-                    p: 1,
-                    fontSize: 14,
-                    fontFamily: roboto.style,
-                  }}
-                >
-                  Learn More
-                </Button>
+                </Typography> */}
+                <Link href="/courses">
+                  <Button
+                    sx={{
+                      backgroundColor: COLORS.PRIMARY,
+                      color: COLORS.WHITE,
+                      mt: 2,
+                      borderRadius: 0,
+                      p: 1,
+                      fontSize: 14,
+                      fontFamily: roboto.style,
+                    }}
+                  >
+                    Learn More
+                  </Button>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

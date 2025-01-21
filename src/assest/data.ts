@@ -28,7 +28,28 @@ import certificate4 from "@/certificate/img-4.jpg";
 import certificate5 from "@/certificate/img-5.jpg";
 import certificate6 from "@/certificate/img-6.jpg";
 import certificate7 from "@/certificate/img-7.jpg";
+import banner1 from "@/banner/sliderBg1.jpg";
+import banner2 from "@/banner/sliderBg2.jpg";
+import banner3 from "@/banner/sliderBg3.jpg";
+import icon1 from "@/icons/24-course.png";
+import icon2 from "@/icons/certificate.png";
+import icon3 from "@/icons/expert-team.png";
+import icon4 from "@/icons/projects.png";
+import icon5 from "@/icons/community.png";
+import icon6 from "@/icons/24-support.png";
 export const data = {
+  bannerSection: [
+    {
+      img: banner1.src,
+    },
+    {
+      img: banner2.src,
+    },
+    {
+      img: banner3.src,
+    },
+  ],
+
   contactHeader: [
     {
       icon: Phone,
@@ -112,22 +133,22 @@ export const data = {
   counterData: [
     {
       icon: Person2,
-      count: 50,
+      count: 15,
       label: "Expert Instructors",
     },
     {
       icon: LibraryBooksOutlined,
-      count: 1150,
+      count: 15,
       label: "Total Courses",
     },
     {
       icon: Mood,
-      count: 8190,
+      count: 7120,
       label: "Happy Students",
     },
     {
       icon: EmojiObjects,
-      count: 654,
+      count: 329,
       label: "Creative Events",
     },
   ],
@@ -172,6 +193,7 @@ export const data = {
       list: [
         {
           label: "Home Page",
+          url: "/",
         },
         {
           label: "Privacy Policy",
@@ -192,18 +214,23 @@ export const data = {
       list: [
         {
           label: "Web Development",
+          url: "/courses/web-development",
         },
         {
           label: "Artificial Intelligence",
+          url: "/courses/artificial-intelligence",
         },
         {
           label: "Data Science",
+          url: "/courses/data-science",
         },
         {
           label: "Machine Learning",
+          url: "/courses/machine-learning",
         },
         {
           label: "Mobile App Development",
+          url: "/courses/mobile-app-development",
         },
         // {
         //   label: "Digital Marketing",
@@ -283,33 +310,33 @@ export const data = {
     {
       heading: "A Place where you can Achieve",
       content1:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      content2:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Our platform is designed to help you succeed. Whether you're upskilling, exploring a new career path, or enhancing your knowledge, we provide expert-curated courses, hands-on learning, and a supportive environment to turn your ambitions into accomplishments.",
+      // content2:
+      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
       heading: "Quality can be better than Quantity in this Platform",
       content1:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      content2:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        "At our EdTech platform, we prioritize quality over quantity. Every course is carefully crafted by industry experts to ensure you gain in-depth knowledge and practical skills. With personalized learning, hands-on projects, and real-world insights, we focus on delivering value that truly advances your career.",
+      // content2:
+      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     },
   ],
   aboutServices: [
     {
       heading: "A Better Future Starts Here",
       description:
-        "Website.com began in 2005. After years in the web hosting industry, we realized that it was near impossible for the average Jane or Joe to create their own website. Traditional web hosting services were simply too complicated, time consuming, and expensive to manage.",
+        "Edzu EdTech was founded in 2023 with a vision to bring meaningful change to the education sector. After years of hard work and dedication, we recognized the need to enhance traditional education. While it serves its purpose well, there is always room to innovate and contribute to the betterment of society.",
     },
     {
       heading: "A Classical Education for the Future",
       description:
-        "We created the Website.com Site Builder with the user’s perspective in mind. We wanted to offer a platform that would require no coding skills or design experience. We keep it simple, so users can focus on creating an amazing website that reflects their brand. Best of all – it’s free. You can get online, showcase your brand, or start selling products right away.",
+        "Prepare for tomorrow with a strong foundation today. Our programs combine timeless educational principles with modern advancements, empowering you to excel in your chosen field and secure a bright, successful future.",
     },
     {
       heading: "A Journey to Excellence",
       description:
-        "After seeing an increased need for eCommerce solutions, we developed one of the only fully-featured, free and commission-free online store builders, allowing business owners to launch their online business.",
+        "Embark on a transformative learning experience that molds your skills and knowledge for success. Our programs are designed to guide you every step of the way, helping you achieve excellence in your chosen field.",
     },
   ],
   aboutSuccess: [
@@ -341,17 +368,17 @@ export const data = {
 
   comboPackData: [
     {
-      label: "Tech Starter",
+      label: "Tech and Data ",
       value: "12+ Diverse Courses",
     },
     {
-      label: "MBA Lite",
+      label: "Business",
       value: "10+ Diverse Courses",
     },
-    {
-      label: "More",
-      value: "2+ Diverse Courses",
-    },
+    // {
+    //   label: "More",
+    //   value: "2+ Diverse Courses",
+    // },
   ],
   courseBenefits: [
     {
@@ -407,6 +434,33 @@ export const data = {
     },
     {
       img: certificate6,
+    },
+  ],
+
+  serviceData: [
+    {
+      img: icon1,
+      label: "24*7 Course Availability",
+    },
+    {
+      img: icon2,
+      label: "industry-recognized certifications",
+    },
+    {
+      img: icon3,
+      label: "Expert team of Mentors",
+    },
+    {
+      img: icon4,
+      label: "Project crafted for you",
+    },
+    {
+      img: icon5,
+      label: "Active Community",
+    },
+    {
+      img: icon6,
+      label: "24*7 Support Availability",
     },
   ],
 };

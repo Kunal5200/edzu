@@ -12,6 +12,8 @@ import GoldenPass from "@/component/goldenPass";
 import ComboPackBenefits from "@/component/combopack/comboPackBenefits";
 import Certification from "@/component/combopack/certification";
 import Faq from "@/component/combopack/faq";
+import Plans from "@/component/plans";
+import { PRICINGPLAN } from "@/assest/pricingPlan";
 const Combopack = () => {
   return (
     <div>
@@ -55,7 +57,7 @@ const Combopack = () => {
                   <Grid2 container sx={{ mt: 2 }} alignItems={"center"}>
                     {data.comboPackData.map((val, i) => (
                       <>
-                        <Grid2 size={{ lg: 3.2, xs: 3 }}>
+                        <Grid2 size={{ lg: 5, xs: 3 }}>
                           <Card
                             sx={{
                               p: 2,
@@ -78,7 +80,7 @@ const Combopack = () => {
                               >
                                 {val.label}
                               </Typography>
-                              <Typography
+                              {/* <Typography
                                 sx={{
                                   fontSize: 12,
                                   fontFamily: roboto.style,
@@ -88,7 +90,7 @@ const Combopack = () => {
                                 }}
                               >
                                 {val.value}
-                              </Typography>
+                              </Typography> */}
                             </Box>
                           </Card>
                         </Grid2>
@@ -113,31 +115,31 @@ const Combopack = () => {
                       fontSize: 20,
                     }}
                   >
-                    Get premium Access to 20+ Courses
+                    Buy any 2 courses at the price of 1
                   </Typography>
                 </Box>
               </Card>
-              <Box sx={{ textAlign: "center" }}>
-                <Button
-                  sx={{
-                    backgroundColor: COLORS.PRIMARY,
-                    fontSize: 18,
-                    fontFamily: roboto.style,
-                    textTransform: "initial",
-                    width: 200,
-                    p: 2,
-                    color: COLORS.WHITE,
-                    mt: 2,
-                  }}
-                >
-                  Join Gold{" "}
-                </Button>
-              </Box>
             </Grid2>
           </Grid2>
         </Container>
         <Box sx={{ pt: 7 }}>
-          <GoldenPass />
+          {/* <GoldenPass /> */}
+          {/* <Plans /> */}
+          <Container sx={{ mt: 7 }}>
+            <Grid2 container spacing={4}>
+              {PRICINGPLAN.map((val, i) => (
+                <Grid2 size={{ lg: 4, xs: 12 }} key={i}>
+                  <Plans
+                    planType={val.planType}
+                    price={val.price}
+                    duration={val.duration}
+                    url={val.url}
+                    benefits={val.benefits}
+                  />
+                </Grid2>
+              ))}
+            </Grid2>
+          </Container>
         </Box>
         <Box sx={{ pt: 7 }}>
           <ComboPackBenefits />

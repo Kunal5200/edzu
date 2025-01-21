@@ -1,18 +1,12 @@
+import { data } from "@/assest/data";
+import logo from "@/logo/logo.png";
+import { COLORS } from "@/utils/enum";
+import { roboto } from "@/utils/fonts";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import logo from "@/logo/logo.png";
-import { kanit, roboto } from "@/utils/fonts";
-import {
-  ArrowDownward,
-  ArrowDropDown,
-  ExpandMore,
-  MoreVert,
-} from "@mui/icons-material";
-import { data } from "@/assest/data";
-import { COLORS, HEADER_LINKS } from "@/utils/enum";
-import { useRouter } from "next/router";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 const Header = () => {
   const router = useRouter();
   const [isScrolling, setIsScrolling] = useState(false);
@@ -35,15 +29,17 @@ const Header = () => {
   return (
     <Box
       sx={{
-        p: 1,
-        position: isScrolling ? "fixed" : "relative",
-        width: isScrolling ? "100%" : "98%",
+        // p: 1,
+        position: isScrolling ? "fixed" : "absolute",
+        width: isScrolling ? "100%" : "100%",
         top: 0,
-        backgroundColor: isScrolling ? "#ffffff50" : "#ffffff",
-        backdropFilter: "blur(5px)",
+        backgroundColor: isScrolling ? "#ffffff50" : "transparent",
+        backdropFilter: isScrolling ? "blur(5px)" : "blur(5px)",
         zIndex: 9999,
         boxShadow: isScrolling ? "0px 0px 8px 8px rgb(0,0,0,0.20)" : "none",
         transition: "all 0.5s ease",
+        pt: 2,
+        pb: 2,
       }}
     >
       <Container>
@@ -97,6 +93,7 @@ const Header = () => {
                     "&:hover::after": {
                       transform: "scaleX(1)",
                     },
+                    color: isScrolling ? COLORS.BLACK : COLORS.WHITE,
                   }}
                   key={i}
                   onClick={() => changePath(val.url)}
