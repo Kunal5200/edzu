@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import whiteLogo from "@/logo/logo-white.png";
 const Header = () => {
   const router = useRouter();
   const [isScrolling, setIsScrolling] = useState(false);
@@ -34,7 +35,7 @@ const Header = () => {
         width: isScrolling ? "100%" : "100%",
         top: 0,
         backgroundColor: isScrolling ? "#ffffff50" : "transparent",
-        backdropFilter: isScrolling ? "blur(5px)" : "blur(5px)",
+        backdropFilter: isScrolling ? "blur(5px)" : "none",
         zIndex: 9999,
         boxShadow: isScrolling ? "0px 0px 8px 8px rgb(0,0,0,0.20)" : "none",
         transition: "all 0.5s ease",
@@ -49,7 +50,7 @@ const Header = () => {
           justifyContent={"space-between"}
         >
           <Link href="/">
-            <Image src={logo} alt="" width={90} />
+            <Image src={isScrolling ? logo : whiteLogo} alt="" width={90} />
           </Link>
           <Stack direction={"row"} alignItems={"center"} spacing={4}>
             {data.headerLinks.map(

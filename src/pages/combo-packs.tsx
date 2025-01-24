@@ -14,6 +14,7 @@ import Certification from "@/component/combopack/certification";
 import Faq from "@/component/combopack/faq";
 import Plans from "@/component/plans";
 import { PRICINGPLAN } from "@/assest/pricingPlan";
+import { COMBO_PACK_PLAN } from "@/assest/comboPackPlan";
 const Combopack = () => {
   return (
     <div>
@@ -127,7 +128,7 @@ const Combopack = () => {
           {/* <Plans /> */}
           <Container sx={{ mt: 7 }}>
             <Grid2 container spacing={4}>
-              {PRICINGPLAN.map((val, i) => (
+              {COMBO_PACK_PLAN.map((val, i) => (
                 <Grid2 size={{ lg: 4, xs: 12 }} key={i}>
                   <Plans
                     planType={val.planType}

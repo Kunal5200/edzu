@@ -21,9 +21,9 @@ import {
 } from "@mui/icons-material";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
-import certificate1 from "@/certificate/img-1.jpg";
-import certificate2 from "@/certificate/img-2.jpg";
-import certificate3 from "@/certificate/img-3.jpg";
+import certificate1 from "@/certificate/certificate-1.jpg";
+import certificate2 from "@/certificate/certificate-2.jpg";
+import certificate3 from "@/certificate/certificate-3.jpg";
 import certificate4 from "@/certificate/img-4.jpg";
 import certificate5 from "@/certificate/img-5.jpg";
 import certificate6 from "@/certificate/img-6.jpg";
@@ -197,13 +197,12 @@ export const data = {
         },
         {
           label: "Privacy Policy",
+          url: "/privacy-policy",
         },
         {
           label: "Refund Policy",
         },
-        {
-          label: "Privacy Policy",
-        },
+
         {
           label: "Terms and Conditions",
         },

@@ -23,7 +23,7 @@ const Plans = ({ planType, price, benefits, url, duration }: PRICING_PLAN) => {
       <Card
         sx={{
           boxShadow: "0px 0px 3px 3px rgb(0,0,0,0.10)",
-          height: {lg:600,xs:530},
+          height: {lg:650,xs:530},
           position: "relative",
         }}
       >
