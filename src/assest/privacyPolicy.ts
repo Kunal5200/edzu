@@ -53,3 +53,43 @@ export const INFORMATION_DATA: LIST[] = [
     label: "Detecting and preventing fraud.",
   },
 ];
+
+export const SHARING_INFORMATION: LIST[] = [
+  {
+    label: "Service Providers",
+    value:
+      "We may share data with trusted providers who assist in operating our website and services. These providers are bound by confidentiality agreements.",
+  },
+  {
+    label: "Legal Obligations",
+    value:
+      "We may disclose information to comply with legal requirements or protect rights and safety.",
+  },
+];
+
+export const RIGHTS_DATA: LIST[] = [
+  {
+    label: "Access",
+    value: "Request a copy of your personal data.",
+  },
+  {
+    label: "Rectify",
+    value: "Request corrections to inaccurate information.",
+  },
+  {
+    label: "Erase",
+    value: "Request deletion of your data under certain conditions.",
+  },
+  {
+    label: "Restrict Processing",
+    value: "Request limitations on processing your data in specific scenarios.",
+  },
+  {
+    label: "Object",
+    value: "Oppose the processing of your data under certain conditions.",
+  },
+  {
+    label: "Data Portability",
+    value: "Request the transfer of your data to another organization.",
+  },
+];

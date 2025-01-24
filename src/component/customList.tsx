@@ -13,16 +13,17 @@ import React from "react";
 
 interface CUSTOM_LIST {
   data: LIST[];
+  fontWeight?: boolean;
 }
 
-const CustomList = ({ data }: CUSTOM_LIST) => {
+const CustomList = ({ data, fontWeight }: CUSTOM_LIST) => {
   return (
     <div>
       <List>
         {data.map((val, i) => (
           <ListItem key={i} disablePadding>
             <ListItemAvatar sx={{ minWidth: 35 }}>
-              <Done sx={{ color: COLORS.PRIMARY,fontSize:15 }} />
+              <Done sx={{ color: COLORS.PRIMARY, fontSize: 15 }} />
             </ListItemAvatar>
             <ListItemText
               primary={
@@ -30,7 +31,7 @@ const CustomList = ({ data }: CUSTOM_LIST) => {
                   sx={{
                     fontSize: 15,
                     fontFamily: roboto.style,
-                    fontWeight: 500,
+                    fontWeight: fontWeight ? 400 : 500,
                   }}
                 >
                   {val.label}
