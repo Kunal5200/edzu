@@ -201,10 +201,12 @@ export const data = {
         },
         {
           label: "Refund Policy",
+          url: "/refund-policy",
         },
 
         {
           label: "Terms and Conditions",
+          url: "/terms-conditions",
         },
       ],
     },

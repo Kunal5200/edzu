@@ -105,3 +105,9 @@ export interface SERVICE_PROPS {
   img: StaticImageData;
   label: string;
 }
+
+export interface TermsProps {
+  heading: string;
+  descriptions: string;
+  list?: LIST[] | undefined;
+}
