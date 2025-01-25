@@ -196,6 +196,10 @@ export const data = {
           url: "/",
         },
         {
+          label: "About Us",
+          url: "/about",
+        },
+        {
           label: "Privacy Policy",
           url: "/privacy-policy",
         },
