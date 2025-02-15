@@ -1,24 +1,19 @@
-import React from "react";
-import banner from "@/banner/combo.jpg";
-import CustomBanner from "@/component/customBanner";
-import { Box, Button, Card, Container, Grid2, Typography } from "@mui/material";
-import coupon from "@/banner/coupon.png";
-import { roboto } from "@/utils/fonts";
-import { COLORS } from "@/utils/enum";
-import { data } from "@/assest/data";
-import { Add } from "@mui/icons-material";
-import Continuous from "@/component/marquee";
-import GoldenPass from "@/component/goldenPass";
-import ComboPackBenefits from "@/component/combopack/comboPackBenefits";
-import Certification from "@/component/combopack/certification";
-import Faq from "@/component/combopack/faq";
-import Plans from "@/component/plans";
-import { PRICINGPLAN } from "@/assest/pricingPlan";
 import { COMBO_PACK_PLAN } from "@/assest/comboPackPlan";
+import { data } from "@/assest/data";
+import banner from "@/banner/combo.jpg";
+import Certification from "@/component/combopack/certification";
+import ComboPackBenefits from "@/component/combopack/comboPackBenefits";
+import Faq from "@/component/combopack/faq";
+import CustomBanner from "@/component/customBanner";
+import Plans from "@/component/plans";
+import { COLORS } from "@/utils/enum";
+import { roboto } from "@/utils/fonts";
+import { Add } from "@mui/icons-material";
+import { Box, Card, Container, Grid2, Typography } from "@mui/material";
 const Combopack = () => {
   return (
     <div>
-      <CustomBanner img={banner.src} heading=" Golden Pass" />
+      <CustomBanner img={banner.src} heading=" Combo Packs" />
       <Box sx={{ pt: 7, pb: 7 }}>
         <Container>
           <Grid2 container>
@@ -58,7 +53,7 @@ const Combopack = () => {
                   <Grid2 container sx={{ mt: 2 }} alignItems={"center"}>
                     {data.comboPackData.map((val, i) => (
                       <>
-                        <Grid2 size={{ lg: 5, xs: 3 }}>
+                        <Grid2 size={{ lg: 5, xs: 5 }}>
                           <Card
                             sx={{
                               p: 2,
@@ -72,7 +67,7 @@ const Combopack = () => {
                             <Box>
                               <Typography
                                 sx={{
-                                  fontSize: { lg: 20, xs: 12 },
+                                  fontSize: { lg: 20, xs: 15 },
                                   fontFamily: roboto.style,
                                   textAlign: "center",
                                   fontWeight: 550,
@@ -81,17 +76,6 @@ const Combopack = () => {
                               >
                                 {val.label}
                               </Typography>
-                              {/* <Typography
-                                sx={{
-                                  fontSize: 12,
-                                  fontFamily: roboto.style,
-                                  textAlign: "center",
-                                  fontWeight: 400,
-                                  color: COLORS.BLACK,
-                                }}
-                              >
-                                {val.value}
-                              </Typography> */}
                             </Box>
                           </Card>
                         </Grid2>
