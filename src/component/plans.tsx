@@ -1,4 +1,5 @@
 import { COLORS } from "@/utils/enum";
+import { roboto } from "@/utils/fonts";
 import { PRICING_PLAN } from "@/utils/types";
 import { Done } from "@mui/icons-material";
 import {
@@ -52,9 +53,32 @@ const Plans = ({
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            position: "relative",
+            overflow: "hidden",
           }}
         >
           <Box>
+            <Box
+              sx={{
+                backgroundColor: COLORS.BLACK,
+                position: "absolute",
+                width: 130,
+                transform: "rotate(-45deg)",
+                left: -30,
+                top: 30,
+              }}
+            >
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  fontSize: 14,
+                  fontFamily: roboto.style,
+                  color: COLORS.WHITE,
+                }}
+              >
+                10% Off
+              </Typography>
+            </Box>
             <Stack
               direction={"row"}
               alignItems={"center"}

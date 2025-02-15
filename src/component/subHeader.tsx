@@ -90,7 +90,7 @@ const SubHeader = () => {
           textAlign: "center",
           fontFamily: roboto.style,
           color: COLORS.WHITE,
-          fontSize: { xs: 10, lg: 18 },
+          fontSize: { xs: 16, lg: 18 },
         }}
       >
         GET EXTRA 10% OFF ON ALL UPI PAYMENTS. VALID FOR LIMITED TIME.
