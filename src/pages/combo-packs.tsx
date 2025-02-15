@@ -25,7 +25,7 @@ const Combopack = () => {
                   background:
                     "linear-gradient(90deg, rgba(33,113,181,1) 20%, rgba(255,215,0,1) 94%)",
                   boxShadow: "0px 0px 4px 4px rgb(0,0,0,0.10)",
-                  height: { lg: "60vh", xs: "60vh" },
+                  height: { lg: "60vh", xs: "50vh" },
                   position: "relative",
                   borderRadius: 4,
                 }}
