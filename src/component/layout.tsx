@@ -10,7 +10,7 @@ const Layout = ({ children }: LayoutProps) => {
   const phone = useMediaQuery("(max-width:600px)");
   return (
     <div>
-      {/* <SubHeader /> */}
+      <SubHeader />
       {phone ? <MobileHeader /> : <Header />}
       <Analytics />
       {children}

@@ -24,7 +24,7 @@ const Herosection = () => {
             <Box
               sx={{
                 backgroundImage: `url(${val.img})`,
-                height: { lg: "100vh", xs: "60vh" },
+                height: { lg: "110vh", xs: "60vh" },
 
                 backgroundPosition: "center",
                 backgroundSize: "cover",

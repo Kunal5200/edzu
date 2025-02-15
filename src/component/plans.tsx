@@ -2,19 +2,26 @@ import { COLORS } from "@/utils/enum";
 import { PRICING_PLAN } from "@/utils/types";
 import { Done } from "@mui/icons-material";
 import {
-    Box,
-    Button,
-    Card,
-    List,
-    ListItem,
-    ListItemAvatar,
-    ListItemText,
-    Stack,
-    Typography,
+  Box,
+  Button,
+  Card,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  Stack,
+  Typography,
 } from "@mui/material";
 import { BiRupee } from "react-icons/bi";
 
-const Plans = ({ planType, price, benefits, url, duration }: PRICING_PLAN) => {
+const Plans = ({
+  planType,
+  price,
+  benefits,
+  url,
+  duration,
+  previousPrice,
+}: PRICING_PLAN) => {
   const Payment = (url: string) => {
     window.open(url, "_blank");
   };
@@ -23,7 +30,7 @@ const Plans = ({ planType, price, benefits, url, duration }: PRICING_PLAN) => {
       <Card
         sx={{
           boxShadow: "0px 0px 3px 3px rgb(0,0,0,0.10)",
-          height: {lg:650,xs:530},
+          height: { lg: 650, xs: 530 },
           position: "relative",
         }}
       >
@@ -52,12 +59,23 @@ const Plans = ({ planType, price, benefits, url, duration }: PRICING_PLAN) => {
               direction={"row"}
               alignItems={"center"}
               justifyContent={"center"}
-              spacing={1}
+              spacing={0.5}
             >
-              <BiRupee fontSize={40} color="#ffffff" />
-              <Typography sx={{ fontSize: 40, color: COLORS.WHITE }}>
-                {price}
-              </Typography>
+              <BiRupee fontSize={35} color="#ffffff" />
+              <Stack direction={"row"} alignItems={"center"} spacing={1}>
+                <Typography sx={{ fontSize: 40, color: COLORS.WHITE }}>
+                  {price}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: 25,
+                    color: COLORS.WHITE,
+                    textDecoration: "line-through",
+                  }}
+                >
+                  {previousPrice}
+                </Typography>
+              </Stack>
             </Stack>
             <Typography sx={{ textAlign: "center", color: COLORS.WHITE }}>
               {duration}

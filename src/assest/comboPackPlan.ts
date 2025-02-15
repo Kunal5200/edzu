@@ -23,6 +23,7 @@ export const COMBO_PACK_PLAN: PRICING_PLAN[] = [
     ],
     url: "https://pages.razorpay.com/combolite",
     duration: "For Two Months",
+    previousPrice: "2899",
   },
   {
     planType: "PRO",
@@ -52,10 +53,11 @@ export const COMBO_PACK_PLAN: PRICING_PLAN[] = [
     ],
     duration: "For 4 Months",
     url: "https://pages.razorpay.com/combopro",
+    previousPrice: "5699",
   },
   {
     planType: "MAESTRY",
-    price: "4499",
+    price: "3799",
     benefits: [
       {
         label: "6 Months Training and Internship Program ",
@@ -93,5 +95,6 @@ export const COMBO_PACK_PLAN: PRICING_PLAN[] = [
     ],
     url: " https://pages.razorpay.com/combomaestry",
     duration: "For 6 Months",
+    previousPrice: "7699",
   },
 ];

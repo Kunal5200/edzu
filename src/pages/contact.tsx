@@ -129,16 +129,18 @@ const Contact = () => {
                     <TextField label="Subject" fullWidth />
                   </Grid2>
                   <Grid2 size={12}>
-                    <TextareaAutosize
-                      style={{
-                        backgroundColor: COLORS.TRANSPARENT,
-                        width: "100%",
-                        border: "2px solid #d7d7d7",
-                        resize: "none",
+                    <TextField
+                      sx={{
+                        fieldset: {
+                          height: 110,
+                        },
+                        "& .MuiOutlinedInput-input": {
+                          height: "100px !important",
+                        },
                       }}
-                      minRows={5}
-                      placeholder="Message"
-                      className="textArea"
+                      label="Message"
+                      fullWidth
+                      multiline
                     />
                   </Grid2>
                   <Grid2 size={12}>

@@ -3,7 +3,7 @@ import { PRICING_PLAN } from "@/utils/types";
 export const PRICINGPLAN: PRICING_PLAN[] = [
   {
     planType: "LITE",
-    price: "899",
+    price: "699",
     benefits: [
       {
         label: "1 Month Training Program ",
@@ -20,10 +20,11 @@ export const PRICINGPLAN: PRICING_PLAN[] = [
     ],
     url: "https://rzp.io/l/traininglite",
     duration: "for one month",
+    previousPrice: "1499",
   },
   {
     planType: "PRO",
-    price: "1799",
+    price: "1399",
     benefits: [
       {
         label: "2 Months Training and Internship Program ",
@@ -43,10 +44,11 @@ export const PRICINGPLAN: PRICING_PLAN[] = [
     ],
     url: "https://rzp.io/rzp/trainingpro",
     duration: "for two months",
+    previousPrice: "2899",
   },
   {
     planType: "MASTERY",
-    price: "3599",
+    price: "1899",
     benefits: [
       {
         label: "3 Months Training and Internship Program",
@@ -75,5 +77,6 @@ export const PRICINGPLAN: PRICING_PLAN[] = [
     ],
     url: "https://rzp.io/l/trainingmastery",
     duration: "for three months",
+    previousPrice: "3899",
   },
 ];

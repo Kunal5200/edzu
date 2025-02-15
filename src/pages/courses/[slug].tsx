@@ -155,32 +155,7 @@ const CourseDetails = () => {
                   </Grid2>
                 </Grid2>
                 <Typography sx={{ fontSize: 30, mt: 4 }}>Outline : </Typography>
-                {/* <Grid2 container spacing={5} mt={4}>
-                  {data?.outline.map((val, i) => (
-                    <Grid2 size={{ lg: 6, xs: 12 }} key={i}>
-                      <Typography sx={{ fontSize: 20 }}>
-                        {val.heading}
-                      </Typography>
 
-                      <List>
-                        {val.list.map((val, i) => (
-                          <ListItem key={i} disablePadding>
-                            <ListItemAvatar sx={{ minWidth: 40 }}>
-                              <StarBorderOutlined />
-                            </ListItemAvatar>
-                            <ListItemText
-                              primary={
-                                <Typography sx={{ fontSize: 14,  }}>
-                                  {val.label}
-                                </Typography>
-                              }
-                            />
-                          </ListItem>
-                        ))}
-                      </List>
-                    </Grid2>
-                  ))}
-                </Grid2> */}
                 <Grid2 container spacing={2} mt={2}>
                   {data?.outline.map((val, i) => (
                     <Grid2 size={12}>
@@ -233,7 +208,7 @@ const CourseDetails = () => {
                   sx={{
                     boxShadow: "0px 0px 2px 2px rgb(0,0,0,0.20)",
                     position: "sticky",
-                    top: 100,
+                    top: 170,
                   }}
                 >
                   <Typography sx={{ fontSize: 20, p: 2 }}>
@@ -267,6 +242,7 @@ const CourseDetails = () => {
                     duration={val.duration}
                     url={val.url}
                     benefits={val.benefits}
+                    previousPrice={val.previousPrice}
                   />
                 </Grid2>
               ))}

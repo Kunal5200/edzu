@@ -96,6 +96,9 @@ const Footer = () => {
                         border: `1px solid ${COLORS.PRIMARY}`,
                       },
                     }}
+                    LinkComponent={"a"}
+                    href={val.url}
+                    target="__blank"
                   >
                     <val.icon />
                   </IconButton>

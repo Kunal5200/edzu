@@ -1,15 +1,43 @@
 import { data } from "@/assest/data";
 import { COLORS } from "@/utils/enum";
-import { kanit } from "@/utils/fonts";
+import { kanit, roboto } from "@/utils/fonts";
 import { Phone, Scale } from "@mui/icons-material";
 import { Box, Container, IconButton, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Marquee from "react-fast-marquee";
 
 const SubHeader = () => {
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        const currentScroll = window.pageYOffset;
+        // setScrollPosition(currentScroll);
+        setIsScrolling(currentScroll > 0);
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
   return (
-    <Box sx={{ backgroundColor: COLORS.PRIMARY, p: 1 }}>
-      <Container>
-        <Stack
+    <Box
+      sx={{
+        backgroundColor: isScrolling ? COLORS.PRIMARY : COLORS.PRIMARY,
+        height: 40,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        position: isScrolling
+          ? { lg: "fixed", xs: "relative" }
+          : { xs: "relative", lg: "absolute" },
+        width: isScrolling ? "100%" : "100%",
+        zIndex: 999,
+      }}
+    >
+      {/* <Container> */}
+      {/* <Stack
           direction={{ lg: "row", xs: "column" }}
           alignItems={"center"}
           justifyContent={"space-between"}
@@ -55,8 +83,20 @@ const SubHeader = () => {
               </IconButton>
             ))}
           </Stack>
-        </Stack>
-      </Container>
+        </Stack> */}
+
+      <Typography
+        sx={{
+          textAlign: "center",
+          fontFamily: roboto.style,
+          color: COLORS.WHITE,
+          fontSize: { xs: 10 },
+        }}
+      >
+        GET EXTRA 10% OFF ON ALL UPI PAYMENTS. VALID FOR LIMITED TIME.
+      </Typography>
+
+      {/* </Container> */}
     </Box>
   );
 };

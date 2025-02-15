@@ -31,6 +31,7 @@ const MobileHeader = () => {
         alignItems={"center"}
         justifyContent={"space-between"}
         p={1}
+        // sx={{ position: "relative", top: 40 }}
       >
         <Image src={logo} alt="" width={100} />
         <IconButton onClick={() => setOpen(true)}>

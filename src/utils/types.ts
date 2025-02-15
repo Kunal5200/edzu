@@ -99,6 +99,7 @@ export interface PRICING_PLAN {
   benefits: LIST[];
   url: string;
   duration: string;
+  previousPrice?: string;
 }
 
 export interface SERVICE_PROPS {
