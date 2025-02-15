@@ -425,21 +425,6 @@ export const data = {
     {
       img: certificate3,
     },
-    {
-      img: certificate4,
-    },
-    {
-      img: certificate5,
-    },
-    {
-      img: certificate6,
-    },
-    {
-      img: certificate7,
-    },
-    {
-      img: certificate6,
-    },
   ],
 
   serviceData: [

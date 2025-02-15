@@ -33,7 +33,7 @@ const Certification = () => {
           </Typography>
           <Grid2 container spacing={5} mt={3}>
             {data.certificateData.map((val, i) => (
-              <Grid2 size={{ lg: 3, xs: 6}} key={i}>
+              <Grid2 size={{ lg: 4, xs: 6}} key={i}>
                 <Image src={val.img} alt="" className="img-fluid" />
               </Grid2>
             ))}

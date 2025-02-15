@@ -71,12 +71,12 @@ const Plans = ({
               <Typography
                 sx={{
                   textAlign: "center",
-                  fontSize: 14,
+                  fontSize: 12,
                   fontFamily: roboto.style,
                   color: COLORS.WHITE,
                 }}
               >
-                10% Off
+                10% off on UPI
               </Typography>
             </Box>
             <Stack
