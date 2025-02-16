@@ -6,12 +6,14 @@ import Footer from "./footer";
 import { useMediaQuery } from "@mui/material";
 import MobileHeader from "./mobileHeader";
 import { Analytics } from "@vercel/analytics/react";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 const Layout = ({ children }: LayoutProps) => {
   const phone = useMediaQuery("(max-width:600px)");
   return (
     <div>
       <SubHeader />
       {phone ? <MobileHeader /> : <Header />}
+      <FloatingWhatsApp phoneNumber="+91 9560021531" accountName="Edzu" />
       <Analytics />
       {children}
       <Footer />
