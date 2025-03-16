@@ -112,3 +112,5 @@ export interface TermsProps {
   descriptions: string;
   list?: LIST[] | undefined;
 }
+
+

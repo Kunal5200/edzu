@@ -4,6 +4,7 @@ import icon2 from "@/course/techData/ai.gif";
 import icon3 from "@/course/techData/dataScience.gif";
 import icon4 from "@/course/techData/machineLearning.gif";
 import icon5 from "@/course/techData/mobileDevelopment.gif";
+import icon6 from "@/course/techData/cyber-security.gif";
 import { COURSE_IDS } from "@/utils/enum";
 export const TECHDATA: TECHDATAPROPS[] = [
   {
@@ -36,5 +37,11 @@ export const TECHDATA: TECHDATAPROPS[] = [
     title: "Mobile App Development",
     course: "20 courses",
     id: COURSE_IDS.MOBILE_APP_DEVELOPMENT,
+  },
+  {
+    img: icon6,
+    title: "Cyber Security",
+    id: COURSE_IDS.CYBER_SECURITY,
+    course: "20 courses",
   },
 ];

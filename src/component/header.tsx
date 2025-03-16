@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import whiteLogo from "@/logo/logo-white.png";
+import whiteLogo from "@/logo/logo-edzu.png";
 const Header = () => {
   const router = useRouter();
   const [isScrolling, setIsScrolling] = useState(false);
@@ -31,16 +31,19 @@ const Header = () => {
     <Box
       sx={{
         // p: 1,
-        position: isScrolling ? "fixed" : "absolute",
+        position: isScrolling ? "fixed" : "relative",
         width: isScrolling ? "100%" : "100%",
-        top: isScrolling ? 40 : 40,
-        backgroundColor: isScrolling ? "#ffffff50" : "transparent",
-        backdropFilter: isScrolling ? "blur(5px)" : "none",
+        top: isScrolling ? 40 : 25,
+        backgroundColor: isScrolling ? "#ffffff" : "ffffff",
+        backdropFilter: isScrolling ? "blur(0px)" : "none",
         zIndex: 9999,
-        boxShadow: isScrolling ? "0px 0px 8px 8px rgb(0,0,0,0.20)" : "none",
+        boxShadow: isScrolling ? "0px 0px 80px 8px rgb(0,0,0,0.20)" : "none",
         transition: "all 0.5s ease",
         pt: 2,
         pb: 2,
+        height: isScrolling ? 70 : 100,
+        display: "flex",
+        alignItems: "center",
       }}
     >
       <Container>
@@ -50,27 +53,15 @@ const Header = () => {
           justifyContent={"space-between"}
         >
           <Link href="/">
-            <Image src={isScrolling ? logo : whiteLogo} alt="" width={90} />
+            <Image
+              src={isScrolling ? whiteLogo : whiteLogo}
+              alt=""
+              width={90}
+            />
           </Link>
           <Stack direction={"row"} alignItems={"center"} spacing={4}>
             {data.headerLinks.map(
               (val, i) => (
-                // val.icon ? (
-                //   <Typography
-                //     sx={{
-                //       fontSize: 16,
-                //       fontFamily: roboto.style,
-                //       fontWeight: 400,
-                //       display: "flex",
-                //       alignItems: "center",
-                //       gap: 0.5,
-                //       cursor: "pointer",
-                //     }}
-                //     key={i}
-                //   >
-                //     {val.label} <ExpandMore />
-                //   </Typography>
-                // ) : (
                 <Typography
                   sx={{
                     fontSize: 16,
@@ -94,7 +85,7 @@ const Header = () => {
                     "&:hover::after": {
                       transform: "scaleX(1)",
                     },
-                    color: isScrolling ? COLORS.BLACK : COLORS.WHITE,
+                    color: isScrolling ? COLORS.BLACK : COLORS.BLACK,
                   }}
                   key={i}
                   onClick={() => changePath(val.url)}

@@ -44,6 +44,7 @@ import { MOBILEAPP_DEVELOPMENT } from "@/assest/mobile-app-debelopment";
 import { Digital_MARKETING } from "@/assest/digital_marketing";
 import { FINANCE } from "@/assest/finance";
 import { HUMAN_RESOURCE } from "@/assest/human-resource";
+import { CYBER_SECURITY } from "@/assest/cyber-security";
 const CourseDetails = () => {
   const [data, setData] = useState<COURSE_DETAILS | null>();
 
@@ -64,6 +65,7 @@ const CourseDetails = () => {
     [COURSE_IDS.DIGITAL_MARKETING]: Digital_MARKETING,
     [COURSE_IDS.FINANCE]: FINANCE,
     [COURSE_IDS.HUMAN_RESOURCE]: HUMAN_RESOURCE,
+    [COURSE_IDS.CYBER_SECURITY]: CYBER_SECURITY,
   };
 
   useEffect(() => {
@@ -95,14 +97,6 @@ const CourseDetails = () => {
           <Container>
             <Grid2 container spacing={4}>
               <Grid2 size={{ lg: 8, xs: 12 }}>
-                {/* <Box sx={{ height: 400 }}>
-                  <Image
-                    src={image}
-                    alt=""
-                    className="img-fluid"
-                    style={{ objectFit: "cover" }}
-                  />
-                </Box> */}
                 <Typography sx={{ fontSize: 30, mt: 4, mb: 2 }}>
                   Overview
                 </Typography>
@@ -189,8 +183,20 @@ const CourseDetails = () => {
                                 </ListItemAvatar>
                                 <ListItemText
                                   primary={
-                                    <Typography sx={{ fontSize: 14 }}>
+                                    <Typography
+                                      sx={{
+                                        fontSize: val.value ? 18 : 14,
+                                        fontWeight: val.value ? 550 : 400,
+                                      }}
+                                    >
                                       {val.label}
+                                    </Typography>
+                                  }
+                                  secondary={
+                                    <Typography
+                                      sx={{ fontSize: val.value ? 16 : 14 }}
+                                    >
+                                      {val.value}
                                     </Typography>
                                   }
                                 />

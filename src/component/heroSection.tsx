@@ -91,8 +91,9 @@ const Herosection = () => {
                             mt: 2,
                             border: `2px solid ${COLORS.PRIMARY}`,
                             ":hover": {
-                              color: COLORS.PRIMARY,
-                              backgroundColor: COLORS.TRANSPARENT,
+                              color: COLORS.WHITE,
+                              backgroundColor: COLORS.TERNARY,
+                              border: `2px solid ${COLORS.TERNARY}`,
                             },
                           }}
                         >

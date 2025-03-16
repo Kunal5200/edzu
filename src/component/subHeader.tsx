@@ -1,10 +1,7 @@
-import { data } from "@/assest/data";
 import { COLORS } from "@/utils/enum";
-import { kanit, roboto } from "@/utils/fonts";
-import { Phone, Scale } from "@mui/icons-material";
-import { Box, Container, IconButton, Stack, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import Marquee from "react-fast-marquee";
+import { roboto } from "@/utils/fonts";
+import { Box, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 
 const SubHeader = () => {
   const [isScrolling, setIsScrolling] = useState(false);

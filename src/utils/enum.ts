@@ -3,7 +3,8 @@ export enum COLORS {
   WHITE = "#FFFFFF",
   MINT_GREEN = "#9e2b25",
   BANNER_COLOR = "#EAF0F2",
-  PRIMARY = "#2171B5",
+  // PRIMARY = "#2171B5",
+  PRIMARY = "Rgb(37,150, 190)",
   TEXT = "#727695",
   SECONDARY = "#6BAED6",
   BLUE = "#0E2742",
@@ -13,6 +14,7 @@ export enum COLORS {
   TRANSPARENT = "transparent",
   LIGHT_BLUE = "#BDD7E7",
   FAQBG = "#F2F2FE",
+  TERNARY = "#E103E5",
 }
 
 export enum HEADER_LINKS {
@@ -37,4 +39,5 @@ export enum COURSE_IDS {
   DIGITAL_MARKETING = "digital-marketing",
   FINANCE = "finance",
   HUMAN_RESOURCE = "human-resource",
+  CYBER_SECURITY = "cyber-security",
 }

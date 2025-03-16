@@ -12,6 +12,8 @@ const TechCard = ({ img, title, course, onClick, id }: TECHDATAPROPS) => {
           p: 2,
           boxShadow: "0px 0px 3px 3px rgb(0,0,0,0.10)",
           backgroundColor: COLORS.WHITE,
+          height: 150,
+          position: "relative",
         }}
       >
         <Box sx={{ textAlign: "center" }}>
@@ -28,20 +30,19 @@ const TechCard = ({ img, title, course, onClick, id }: TECHDATAPROPS) => {
         >
           {title}
         </Typography>
-        <Button sx={{ mt: 1, textAlign: "center" }} fullWidth onClick={onClick}>
+        <Button
+          sx={{
+            mt: 1,
+            textAlign: "center",
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+          }}
+          fullWidth
+          onClick={onClick}
+        >
           View Course
         </Button>
-        {/* <Typography
-          sx={{
-            fontSize: 14,
-            fontFamily: roboto.style,
-            textAlign: "center",
-            mt: 1,
-            color: COLORS.PRIMARY,
-          }}
-        >
-          {course}
-        </Typography> */}
       </Card>
     </div>
   );

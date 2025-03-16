@@ -97,16 +97,6 @@ const Courses = () => {
                     data-aos="fade-up"
                     key={index}
                   >
-                    {/* <CourseCard
-                    img={val.img}
-                    title={val.title}
-                    tutorName={val.tutorName}
-                    price={val.price}
-                    rating={val.rating}
-                    category={val.category}
-                    lessons={val.lessons}
-                    time={val.time}
-                  /> */}
                     <TechCard
                       img={val.img}
                       title={val.title}
