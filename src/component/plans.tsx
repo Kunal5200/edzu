@@ -58,7 +58,7 @@ const Plans = ({
           }}
         >
           <Box>
-            <Box
+            {/* <Box
               sx={{
                 backgroundColor: COLORS.BLACK,
                 position: "absolute",
@@ -78,7 +78,7 @@ const Plans = ({
               >
                 10% off on UPI
               </Typography>
-            </Box>
+            </Box> */}
             <Stack
               direction={"row"}
               alignItems={"center"}

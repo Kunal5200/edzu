@@ -33,7 +33,7 @@ const Header = () => {
         // p: 1,
         position: isScrolling ? "fixed" : "relative",
         width: isScrolling ? "100%" : "100%",
-        top: isScrolling ? 40 : 25,
+        top: isScrolling ? 0 : 0,
         backgroundColor: isScrolling ? "#ffffff" : "ffffff",
         backdropFilter: isScrolling ? "blur(0px)" : "none",
         zIndex: 9999,
@@ -41,7 +41,7 @@ const Header = () => {
         transition: "all 0.5s ease",
         pt: 2,
         pb: 2,
-        height: isScrolling ? 70 : 100,
+        height: isScrolling ? 60 : 60,
         display: "flex",
         alignItems: "center",
       }}

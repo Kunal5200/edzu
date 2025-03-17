@@ -11,7 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
   const phone = useMediaQuery("(max-width:600px)");
   return (
     <div>
-      <SubHeader />
+      {/* <SubHeader /> */}
       {phone ? <MobileHeader /> : <Header />}
       <FloatingWhatsApp phoneNumber="+91 9560021531" accountName="Edzu" />
       <Analytics />

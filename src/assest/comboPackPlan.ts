@@ -3,7 +3,7 @@ import { PRICING_PLAN } from "@/utils/types";
 export const COMBO_PACK_PLAN: PRICING_PLAN[] = [
   {
     planType: "Lite",
-    price: "1399",
+    price: "2499",
     benefits: [
       {
         label: "2 Months Training Program",
@@ -23,11 +23,11 @@ export const COMBO_PACK_PLAN: PRICING_PLAN[] = [
     ],
     url: "https://pages.razorpay.com/combolite",
     duration: "For Two Months",
-    previousPrice: "2899",
+    previousPrice: "6499",
   },
   {
     planType: "PRO",
-    price: "2799",
+    price: "4499",
     benefits: [
       {
         label: "4 Months Training and Internship Program ",
@@ -53,14 +53,17 @@ export const COMBO_PACK_PLAN: PRICING_PLAN[] = [
     ],
     duration: "For 4 Months",
     url: "https://pages.razorpay.com/combopro",
-    previousPrice: "5699",
+    previousPrice: "9499",
   },
   {
     planType: "MAESTRY",
-    price: "3799",
+    price: "7599",
     benefits: [
       {
         label: "6 Months Training and Internship Program ",
+      },
+      {
+        label: "2 different Live Classes",
       },
       {
         label: "Recorded Sessions",
@@ -95,6 +98,6 @@ export const COMBO_PACK_PLAN: PRICING_PLAN[] = [
     ],
     url: " https://pages.razorpay.com/combomaestry",
     duration: "For 6 Months",
-    previousPrice: "7699",
+    previousPrice: "14499",
   },
 ];
