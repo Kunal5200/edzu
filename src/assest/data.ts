@@ -93,7 +93,7 @@ export const data = {
     },
     {
       label: HEADER_LINKS.COMBOPACKS,
-      url: "combo-packs",
+      url: "/combo-packs",
     },
     {
       label: HEADER_LINKS.CONTACT,
