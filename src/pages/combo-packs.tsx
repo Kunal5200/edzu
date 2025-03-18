@@ -120,6 +120,7 @@ const Combopack = () => {
                     duration={val.duration}
                     url={val.url}
                     benefits={val.benefits}
+                    previousPrice={val.previousPrice}
                   />
                 </Grid2>
               ))}

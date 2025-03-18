@@ -10,7 +10,7 @@ export const TestimonialData: TESTIMONIAL_DATA[] = [
   {
     img: girl1,
     name: "Shree Priya Rastogi",
-    designation: "Student",
+    designation: "(Web Development) (Student)",
     content:
       "“I have had a fantastic experience with Edzu edtech. Their commitment to quality and customer satisfaction is commendable. From start to finish, they exceeded my expectations with their professionalism and attention to detail. I would highly recommend Edzu edtech to anyone looking for an online course and internship. Keep up the excellent work!”",
   },

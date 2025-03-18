@@ -54,6 +54,9 @@ export const PRICINGPLAN: PRICING_PLAN[] = [
         label: "3 Months Training and Internship Program",
       },
       {
+        label: "1 Month LIVE CLASSES",
+      },
+      {
         label: "Recorded Sessions",
       },
       {

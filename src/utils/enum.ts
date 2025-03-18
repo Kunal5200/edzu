@@ -6,7 +6,7 @@ export enum COLORS {
   // PRIMARY = "#2171B5",
   PRIMARY = "Rgb(37,150, 190)",
   TEXT = "#727695",
-  SECONDARY = "#6BAED6",
+  SECONDARY = "Rgb(37,150, 190)",
   BLUE = "#0E2742",
   GREY = "#EFF3FF",
   SECTIONBG = "#E7F0FD",

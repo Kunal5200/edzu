@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import logo from "@/logo/logo.png";
+import logo from "@/logo/new-logo.png";
 import Image from "next/image";
 import { Close, ExpandMore, Menu } from "@mui/icons-material";
 import { data } from "@/assest/data";
