@@ -46,7 +46,7 @@ const Courses = () => {
             fontFamily: roboto.style,
             textTransform: "uppercase",
             textAlign: "center",
-            color: COLORS.BLUE,
+            color: COLORS.WHITE,
             letterSpacing: 3,
           }}
         >
@@ -57,7 +57,7 @@ const Courses = () => {
             fontSize: 30,
             fontFamily: roboto.style,
             textAlign: "center",
-            color: COLORS.BLUE,
+            color: COLORS.WHITE,
             fontWeight: 600,
             mt: 2,
           }}
@@ -70,10 +70,10 @@ const Courses = () => {
             value={value}
             sx={{
               "& .Mui-selected": {
-                color: `${COLORS.BLUE} !important`,
+                color: `${COLORS.WHITE} !important`,
               },
               "& .MuiTabs-indicator": {
-                backgroundColor: COLORS.BLUE,
+                backgroundColor: COLORS.WHITE,
               },
             }}
           >
