@@ -71,16 +71,22 @@ const Courses = () => {
             sx={{
               "& .Mui-selected": {
                 color: `${COLORS.WHITE} !important`,
+                // color: "#1e6ddc",
+                backgroundColor: COLORS.PRIMARY,
+                borderRadius: 8,
+                fontSize: 14,
+                textTransform:'initial'
               },
               "& .MuiTabs-indicator": {
-                backgroundColor: COLORS.WHITE,
+                // backgroundColor: COLORS.WHITE,
+                display: "none",
               },
             }}
           >
             {data.courseTypeProduct.map((val, i) => (
               <Tab
                 label={
-                  <Typography sx={{ fontSize: 18, fontFamily: roboto.style }}>
+                  <Typography sx={{  fontFamily: roboto.style }}>
                     {val.label}
                   </Typography>
                 }

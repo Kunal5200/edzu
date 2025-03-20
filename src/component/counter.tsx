@@ -18,7 +18,7 @@ const Counter = () => {
     <div>
       <Box
         sx={{
-          backgroundColor: COLORS.BLUE,
+          backgroundColor: COLORS.SECONDARY,
           height: 300,
           display: "flex",
           alignItems: "center",
